@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  </head>
+  <body>
+    <div class="register2">
+      <div id="register-div2">
+      <div class="container-fluid">
+        <div class="row">
+
+           <div class="col" id="register-col-1"><a href="../Main/fontPage.html"  id="register-col-1">UFARM</a></div>
+          <div class="col" id="register-row">
+            <!-- form -->
+            <form action=""id="form1" class="form2" onsubmit="" method="post">
+            <h1>Registration Form</h1>
+            <input type="text" class="firstName" placeholder="First name" />
+            <input type="text" class="secondName"  placeholder="Second name" />
+            <input type="text" class="Email"  placeholder="Email" />
+            <input type="password" class="password"  placeholder="Password" />
+            <input type="password" class="confirmPassword"  placeholder="Confirm Password" />
+            <input type="text" class="location"  placeholder="Location" /><br />
+            <!-- gender  -->
+             <label for="">Male</label>
+             <input type="radio" name="gender" id="check1" for="check1">
+             <label for="">Female</label>
+             <input type="radio" name="gender" id="check2" for="check2"><br>
+       
+
+            <label for="">Select user Type</label><br>
+            <select name="user" id="users" class="users">
+                <option value="Customer">Customer</option>
+                <option value="Agricultural Officer">Agricultural Officer</option>
+                
+            </select><br>
+
+            <button  type="submit" value="register" id="register-submit">Submit</button>
+            </form>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="../index.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+  </body>
+</html>

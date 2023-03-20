@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmerOne</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  
+</head>
+<body>
+    <div id="famOne">
+    <div class="container-fluid" id="famtwo"> 
+        <div class="row"> 
+           <div class="col-xs-12 col-lg-3 col-md-3" >
+            <a href="../Main/fontPage.html" class="send">  <h1 >UFARM </h1> </a> 
+            <p class="far2">Register FarmerOne to grant them access.</p>
+            </div>
+           <!-- form -->
+           <div class="col-xs-12 col-lg-6 col-md-6" id="foRegister">
+            <h3>Registration Form</h3>
+            <fieldset>
+            <form action="" method="">
+                <!-- firstName -->
+                
+                <div>
+                <label for="">firstName</label><br>
+                <input type="text" name="firstName" style="width: 100%;"><br>
+                 <small id="errorFirst"></small>
+                </div>
+                 <!-- secondname  -->
+                 <div>
+                 <label for="">secondName</label><br>
+                <input type="text" name="secondName" style="width: 100%";><br>
+                 <small id="errorSecond"></small>
+                 </div>
+                 <!-- ward -->
+                 <div>
+                 <label for="ward1" >Ward 1</label>
+                 <input type="radio"name="ward" id="ward1">
+                 <label for="ward2">Ward 2</label>
+                 <input type="radio" name="ward" id="ward2">
+                 <label for="ward3">Ward 3</label>
+                 <input type="radio"name="ward" id="ward3">
+                 <label for="ward4">Ward 4</label>
+                 <input type="radio" name="ward" id="ward4"><br>
+                 <small id="error3"></small>
+                 </div>
+                 <!-- unique FO number -->
+                 <div>
+                 <input type="text" placeholder="FO number" id="foNumber" style="width: 100%"><br>
+                 <small id="error4"></small>
+                 </div>
+                
+                 <!-- date of registration -->
+                 <div>
+                 <label for="regDate">Date of registration</label><br>
+                 <input type="date" name="date of registration" id="regDate" style="width: 100%"><br>
+                 <small id="error5"></small>
+                 </div>
+                 <!-- gender -->
+                 <div>
+                 <label for="">Male</label>
+                 <input type="radio"name="gender">
+                 <label for="">Female</label>
+                 <input type="radio" name="gender" class="yaa">
+                 </div>
+                 <!-- date of birth -->
+                 <div>
+                 <label for="foBirth">Date of Birth</label><br>
+                 <input type="date" name="fobirth" id="foBirth"style="width: 100%"><br>
+                 <small id="error5"></small>
+                 </div>
+                 <!-- activities involved -->
+                 <div>
+                 <label for="" style="font-weight: 600;">Activities</label><br>
+                 <input type="checkbox" name="" id="">Register Urban Farmers <br>
+                 
+                 <input type="checkbox" name="" id="">Inspect produce <br>
+                 
+                 <input type="checkbox" name="" id="">Approve Produce<br>
+                 
+                 <input type="checkbox" name="" id="" class="yaa"> See bookings and orders<br>
+                 <small id="error6"></small>
+                 </div>
+                 <!-- nin -->
+                 <div>
+                 <input type="text" placeholder="NIN number" style="width: 100%"><br>
+                 <small id="error7"></small>
+                 </div>
+                 <!-- phone number -->
+                 <div>
+                 <label for="">Phone Number</label><br>
+                 <input type="number" name="" id="" style="width: 100%"><br>
+                 <small id="error8"></small>
+                 </div>
+                 <!-- location -->
+                 <div>
+                 <label for="residence" >Place of Residence</label><br>
+                 <input type="text" id="residence" class="residence" name="place of residence" style="width: 100%"><br>
+                 <small id="error9"></small>
+                 </div>
+                  <!-- resdence type  -->
+                  <div>
+                  <label for="residenceType" >Residence Type</label><br>
+                  <input type="text" id="residenceType" class="residencetype" name=" residence type" style="width: 100%"><br>
+                  <small id="error10"></small>
+                  </div>
+                  <!-- period of stay in ward -->
+                  <div>
+                  <label for="">Period of Stay in Ward</label><br>
+                  <input type="number" id=""  ><br>
+                  <small id="error11"> Above 10 years</small>
+                  </div>
+                  <button class="sub" >SUBMIT</button>
+              
+            </form>
+            </fieldset>
+           </div> 
+           <div class="col-xs-12 col-lg-3 col-md-3"></div> 
+        </div> 
+     </div>
+    </div>
+    <script src="../index.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+
+</body>
+</html>
