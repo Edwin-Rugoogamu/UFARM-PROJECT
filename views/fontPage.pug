@@ -1,0 +1,40 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title UFARM
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css' integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  link(rel='stylesheet' href='../bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='../style.css')
+#mainContainer
+  .container2
+    .container-fluid
+      #header1.row
+        nav#font-page-nav.navbar.navbar-expand-lg
+          .container-fluid
+            i.fa-brands.fa-pagelines(style='color: green')
+            a#ufarm.navbar-brand(href='#') UFARM
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+            #navbarNavAltMarkup.collapse.navbar-collapse
+              #headingNav.navbar-nav.ms-auto
+                a#son.nav-link.active(style='color: white' aria-current='page' href='../Customer/homePage.html') Home
+                a.nav-link.active(style='color: white' href='#') Features
+                a.nav-link.active(style='color: white' href='#') Prouducts
+                a.nav-link.active(style='color: white' href='#') Sevices
+                a(href='./login.html')
+                  button#loginButton LOGIN 
+    #them.container
+      .row
+        #information.col
+          h1.welcome Welcome to UFARM
+          h2.health
+            | Healthy products delivered 
+            br
+            | to you at your door
+          h3.dont Don&apos;t have an Account? Register Here.
+          a(href='../Main/register.html')
+            button.register REGISTER
+script(src='../index.js')
+script(src='../bootstrap/js/bootstrap.js')

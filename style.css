@@ -373,3 +373,17 @@ height: 100%;
 .food{
   
 }
+#famOne1 {
+  background-image: url(./images/fresh\ fruit\ pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100dvh;
+  background-attachment: fixed;
+  background-position: center;
+}
+#famtwo2{
+  position: sticky;
+  background: transparent;
+  background-image: linear-gradient(to right, rgb(15, 10, 10), transparent);
+  height: 100%;
+}

@@ -1,0 +1,48 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Login
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css' integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  link(rel='stylesheet' href='../style.css')
+  link(rel='stylesheet' href='../bootstrap/css/bootstrap.css')
+#loginPage
+  .login-page-1
+    .container
+      .row
+        a.header1(href='../Main/fontPage.html')
+          | UFARM
+  #login2.container
+    .row
+      .col
+        form(action='' method='post' onsubmit='')
+          h1 Login
+          // Username
+          p
+            | Username
+            br
+            input(type='text' style='border-style: groove ;')
+          small#error1
+          // password
+          p
+            | Password
+            br
+            input(type='password' style='border-style: groove;')
+          // user
+          label(for='') Select user Type
+          br
+          select#users.users(name='user')
+            option(value='Customer') Customer
+            option(value='Agricultural Officer') Agricultural Officer
+            option(value='Farmer One') Farmer One
+            option(value='Urban Farmer') Urban Farmer
+          p(style='margin-top: 10px;')  Forgot Password?
+          small#error2
+          // login
+          button.login1(type='submit' value='login') LOGIN
+          p
+            | Don&apos;t have an account? 
+            a(href='../Main/register.html') Register. 
+script(src='../index.js')
+script(src='../bootstrap/js/bootstrap.js')

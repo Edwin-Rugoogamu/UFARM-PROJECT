@@ -1,0 +1,89 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Urban Farmer
+  link(rel='stylesheet' href='../bootstrap/css/bootstrap.css')
+  link(rel='stylesheet' href='../style.css')
+.uFarmer3
+  #uFarmer.container-fluid
+    .row
+      .col-xs-12.col-lg-3.col-md-3
+        a.send(href='../Main/fontPage.html')
+          h1 UFARM 
+        p.far2 Register Urban Farmer to grant them access.
+      #uFarmer2.col-xs-12.col-lg-6.col-md-6
+        form(action='')
+          h3 REGISTRATION FORM 
+          // firstName
+          div
+            label(for='') First Name
+            br
+            input(type='text' style='width: 100%')
+            br
+          // second name
+          div
+            label(for='') Second Name
+            br
+            input(type='text' style='width: 100%')
+            br
+          // gender
+          div
+            label(for='') Male
+            input(type='radio' name='gender')
+            label(for='') Female
+            input(type='radio' name='gender')
+            br
+          // date of registration
+          div
+            label(for='') Date of registration
+            br
+            input(type='date' style='width: 100%')
+            br
+          // date of birth
+          div
+            label(for='') Date of Birth
+            br
+            input(type='date' style='width: 100%')
+            br
+          // activities undertaken
+          div
+            label(for='') Activities undertaken
+            br
+            input(type='checkbox' name='' id='')
+            | Upload Products 
+            br
+            input(type='checkbox' name='' id='')
+            | Upload produce 
+            br
+          // contacts
+          div
+            label(for='') Personal No.
+            br
+            input(type='number' name='' id='' style='width: 100%')
+            br
+            label(for='') Other No.
+            br
+            input(type='number' name='' id='' style='width: 100%')
+            br
+          // nin
+          div
+            input(type='text' placeholder='NIN number')
+            br
+          // ward
+          div
+            label(for='ward1') Ward 1
+            input#ward1(type='radio' name='ward')
+            label(for='ward2') Ward 2
+            input#ward2(type='radio' name='ward')
+            label(for='ward3') Ward 3
+            input#ward3(type='radio' name='ward')
+            label(for='ward4') Ward 4
+            input#ward4(type='radio' name='ward')
+            br
+          // submit
+          button#UFregister.sub(type='submit' value='register') Submit
+      .col-xs-12.col-lg-3.col-md-3 Right column
+script(src='../index.js')
+script(src='../bootstrap/js/bootstrap.bundle.js')

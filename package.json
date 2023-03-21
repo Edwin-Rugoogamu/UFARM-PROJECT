@@ -1,0 +1,17 @@
+{
+  "name": "main-ufarm",
+  "version": "1.0.0",
+  "description": "edwin# UFARM-PROJECT",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Edwin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.21",
+    "pug": "^3.0.2"
+  }
+}
