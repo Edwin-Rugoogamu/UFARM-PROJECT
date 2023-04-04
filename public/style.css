@@ -1,0 +1,409 @@
+@keyframes fadeInUp {
+  from {
+  }
+  to {
+    background-color: blue;
+  }
+}
+#mainContainer {
+  background-image: url(./images/fresh\ fruit\ pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+}
+.container2 {
+  position: sticky;
+
+  background: transparent;
+  background-image: linear-gradient(to right,black,transparent);
+  height: 100vh;
+}
+#hearderContent {
+  text-align: center;
+  font-size: 0.2px;
+}
+#loginButton {
+  border-radius: 20px;
+  background-color: green;
+  color: aliceblue;
+  width: 150px;
+}
+#loginButton:hover {
+  color: black;
+}
+#information {
+  /* text-align: center; */
+
+  margin-left: 30px;
+  /* padding-left: 65px; */
+  width: 400px;
+  color: white;
+}
+
+.welcome {
+  padding-top: 100px;
+  animation-name: fadeInUp;
+  animation-delay: 2s;
+}
+.health {
+  padding-top: 50px;
+}
+.dont {
+  padding-top: 100px;
+}
+.register {
+  margin-top: 20px;
+  margin-left: 50px;
+  border-radius: 100px;
+  background-color: green;
+  color: white;
+  width: 200px;
+  font-weight: 600;
+}
+.register:hover {
+  color: black;
+}
+
+#loginPage {
+  /* background-color: rgb(11, 252, 103);
+  height: 100dvh; */
+  background-image: url(./images/fresh\ fruit\ pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+}
+.login-page-1 {
+  /* background-image: linear-gradient(to bottom, rgb(63, 160, 92), transparent);
+  height: 100%; */
+  position: sticky;
+
+  background: transparent;
+  background-image: linear-gradient(to right, rgb(15, 10, 10), transparent);
+  height: 100vh;
+}
+#login2 {
+  align-self: center;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  text-align: center;
+}
+#fruit {
+  padding-top: 50px;
+  margin-top: 30px;
+  mix-blend-mode: hard-light;
+}
+.navbar-brand {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 500;
+  color: rgb(45, 189, 93);
+}
+#ufarm:hover {
+  color: white;
+}
+#ufarm {
+  color: green;
+}
+#headingNav {
+  font-weight: 600;
+  font-size: 20px;
+  font-style: italic;
+}
+#headingNav {
+  /* background-color: blue; */
+  text-decoration-color: antiquewhite;
+  margin-right: 80px;
+}
+
+#font-page-nav {
+  background-color: rgb(181, 209, 190);
+  margin-top: 0px;
+  position: fixed;
+  height: auto;
+  width: 100%;
+  background-image: linear-gradient(to right, rgb(34, 13, 13), transparent);
+}
+
+.position-relative {
+  height: 100%;
+}
+.register2 {
+  /* background-color: rgb(87, 190, 96);
+  height: 100%; */
+  background-image: url(./images/fresh\ fruit\ pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#register-row {
+  background-color: white;
+  margin-top: 90px;
+  border-radius: 10px;
+  color: black;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.register-input {
+  border-radius: 5px;
+  margin-top: 10px;
+  border-color: white;
+}
+#register-submit {
+  background-color: green;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#register-submit:hover{
+  color:black
+}
+
+#register-col-1 {
+  color:green;
+  font-size: 25px;
+  font-family:serif;
+  text-decoration:none;
+}
+#register-col-1:hover{
+  color:white
+}
+.home-page-1 {
+  /* background-image: url(./images/grass.jpg); */
+  background-image: url(./images/fresh\ fruit\ pic.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#col-1 {
+  background-color: white;
+
+}
+#col-2 {
+  padding: 0px 10px 0px 0px;
+  font-size: 10px;
+}
+#brand-name {
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 700;
+  color: green;
+}
+#shop-cart {
+  padding-left: 40px;
+  padding-top: 20px;
+  color: green;
+}
+
+#homepage-cont {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#input-homepage {
+  border-radius: 5px;
+  border-color: green;
+  color: green;
+
+}
+#cont3-homepage {
+  /* background-image: url(/images/berries.jpg); */
+  background-image: url(./images/fresh\ fruit\ pic.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+#center-objects {
+  background-color: rgba(240, 248, 255, 0.678);
+  color: green;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+#icon-group {
+  background-color: white;
+  padding-top: 50px;
+  font-size: 10px;
+  padding-bottom: 40px;
+  text-align: center;
+  size: 30px;
+}
+.icon1 {
+  color: green;
+}
+#cont-pic {
+  background-color: rgb(206, 238, 206);
+}
+#son:hover {
+  color: black;
+}
+.secondName {
+  margin-top: 10px;
+}
+.Email {
+  margin-top: 10px;
+}
+.password {
+  margin-top: 10px;
+}
+.confirmPassword {
+  margin-top: 10px;
+}
+.location {
+  margin-top: 10px;
+}
+.login1:hover {
+  color:black;
+
+}
+.login1{
+  background-color:green;
+  color:white
+}
+#cont-pic {
+  text-align: center;
+}
+#catego {
+  color: green;
+  padding-bottom: 20px;
+}
+/* #header1{
+  width: ;
+} */
+#foRegister {
+  background-color: white;
+  margin-top: 40px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  /* text-align: center; */
+}
+#famOne {
+  /* background-color: green;
+  height: 100%; */
+  background-image: url(./images/fresh\ fruit\ pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+}
+#famtwo{
+  position: sticky;
+
+  background: transparent;
+  background-image: linear-gradient(to right, rgb(15, 10, 10), transparent);
+  height: 100%;
+}
+.far2 {
+  color: white;
+  font-size: 15px;
+}
+fieldset {
+  display: block;
+  border-style: groove;
+  border-color: rgb(14, 13, 13);
+}
+.sub{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background-color: green;
+  color: white;
+}
+.sub:hover{
+  color:black
+}
+#uFarmer{
+/* background-color: green; */
+position: sticky;
+
+background: transparent;
+background-image: linear-gradient(to right, rgb(15, 10, 10), transparent);
+height: 100%;
+}
+.uFarmer3{
+  background-image: url(./images/fresh\ fruit\ pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#uFarmer2{
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.header1{
+  text-decoration: none;
+  font-size: 25px;
+  font-style: italic;
+  color:green;
+}
+#register-div2{
+  position: sticky;
+
+  background: transparent;
+  background-image: linear-gradient(to right, rgb(15, 10, 10), transparent);
+  height: 100vh;
+}
+.header1:hover{
+  color: white;
+}
+.send:hover{
+  color:white
+}
+.send{
+  color:green;
+  text-decoration: none;
+}
+.food{
+  
+}
+#famOne1 {
+  background-image: url(./images/fresh\ fruit\ pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100dvh;
+  background-attachment: fixed;
+  background-position: center;
+}
+#famtwo2{
+  position: sticky;
+  background: transparent;
+  background-image: linear-gradient(to right, rgb(15, 10, 10), transparent);
+  height: 100%;
+  color:white
+}
+.ufarmer4{
+  background-image: url(./images/fresh\ fruit\ pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100dvh;
+  background-attachment: fixed;
+  background-position: center;
+}
+.ufarmer5{
+  position: sticky;
+  background: transparent;
+  background-image: linear-gradient(to right, rgb(15, 10, 10), transparent);
+  height: 100%;
+  color:white
+}

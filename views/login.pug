@@ -11,24 +11,24 @@ head
   .login-page-1
     .container
       .row
-        a.header1(href='../Main/fontPage.html')
+        a.header1(href='./fontpage')
           | UFARM
   #login2.container
     .row
       .col
-        form(action='' method='post' onsubmit='')
+        form(action='./login' method='POST' onsubmit='return validate()')
           h1 Login
           // Username
           p
             | Username
             br
-            input(type='text' style='border-style: groove ;')
+            input(type='text' style='border-style: groove' name='email')
           small#error1
           // password
           p
             | Password
             br
-            input(type='password' style='border-style: groove;')
+            input(type='password' style='border-style: groove;' name='password')
           // user
           label(for='') Select user Type
           br
@@ -43,6 +43,6 @@ head
           button.login1(type='submit' value='login') LOGIN
           p
             | Don&apos;t have an account? 
-            a(href='../Main/register.html') Register. 
-script(src='../index.js')
+            a(href='./register') Register. 
+script(src='./index.js')
 script(src='../bootstrap/js/bootstrap.js')

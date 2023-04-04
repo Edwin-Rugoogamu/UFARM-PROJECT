@@ -12,31 +12,51 @@ head
     .container-fluid
       .row
         #register-col-1.col
-          a#register-col-1(href='../Main/fontPage.html') UFARM
+          a#register-col-1(href='./fontpage') UFARM
         #register-row.col
           // form
-          form#form1.form2(action='' onsubmit='' method='post')
+          form#form1.form2(action='./register' onsubmit='return validate()' method='POST')
             h1 Registration Form
-            input.firstName(type='text' placeholder='First name')
-            input.secondName(type='text' placeholder='Second name')
-            input.Email(type='text' placeholder='Email')
-            input.password(type='password' placeholder='Password')
-            input.confirmPassword(type='password' placeholder='Confirm Password')
-            input.location(type='text' placeholder='Location')
-            br
+            // first name
+            div
+              input#sure.firstName(type='text' placeholder='First name' name='firstName')
+            // secondname
+            div
+              input#secondName.secondName(type='text' placeholder='Second name' name='secondName')
+            // email
+            div
+              input#email.Email(type='text' placeholder='Email' name='email')
+            // password
+            div
+              input#password.password(type='password' placeholder='Password' name='password')
+            // cormfirm password
+            div
+              input#confirmPassword.confirmPassword(type='password' placeholder='Confirm Password' name='confirmPassword')
+              br
+              small#err
+            // location
+            div
+              input#location.location(type='text' placeholder='Location' name='location')
+              br
             // gender
-            label(for='') Male
-            input#check1(type='radio' name='gender' for='check1')
-            label(for='') Female
-            input#check2(type='radio' name='gender' for='check2')
-            br
-            label(for='') Select user Type
-            br
-            select#users.users(name='user')
-              option(value='Customer') Customer
-              option(value='Agricultural Officer') Agricultural Officer
-            br
-            button#register-submit(type='submit' value='register') Submit
+            div
+              label(for='Male') Male
+              input#check1(type='radio' name='gender' for='check1')
+            div
+              label(for='Female') Female
+              input#check2(type='radio' name='gender' for='check2')
+              br
+              small.error
+            // select usertype
+            div
+              label(for='') Select user Type
+              br
+              select#users.users(name='user')
+                option(value='Customer' name='customer') Customer
+                option(value='Agricultural Officer' name='Agricultural_Officer') Agricultural Officer
+              br
+            // submit
+            button#register-submit(type='submit') Submit
         .col
-script(src='../index.js')
 script(src='../bootstrap/js/bootstrap.js')
+script(src='../validation/index.js')

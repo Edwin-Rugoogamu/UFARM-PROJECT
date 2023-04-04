@@ -29,15 +29,21 @@
     <div class="container" id="login2"> 
         <div class="row"> 
            <div class="col">
-            <form action="" method="post" onsubmit="">
+            <form action="#"  onsubmit="return validate()" method="get">
             <h1>Login</h1>
             <!-- Username -->
-            <p>Username<br><input type="text" style="border-style: groove ;"></p>
+            <div>
+            <label>Username </label><br>
+            <input type="text" style="border-style: groove ;" id="username1">
             <small id="error1"></small>
+            </div>
             <!-- password -->
-            <p>Password<br>
+            <div>
+            <label>Password </label><br>
             <input type="password" style="border-style: groove;"></p>
+            </div>
                <!-- user -->
+               <div>
             <label for="">Select user Type</label><br>
             <select name="user" id="users" class="users">
                 <option value="Customer">Customer</option>
@@ -45,12 +51,13 @@
                 <option value="Farmer One">Farmer One</option>
                 <option value="Urban Farmer">Urban Farmer</option>
             </select>
+               </div>
            <p style="margin-top: 10px;"> Forgot Password?</p>
            <small id="error2"></small> 
            
            
            <!-- login -->
-           <button type="submit" value="login" class="login1">LOGIN</button>
+           <button type="submit"  class="login1">LOGIN</button>
            <p>Don't have an account? <a href="../Main/register.html">Register. </a></p>
            
 
@@ -60,7 +67,7 @@
      </div>
         </div>
     </div>
-    <script src="../index.js"></script>
+    <script src="../public/index.js"></script>
     <script src="../bootstrap/js/bootstrap.js"></script>
 </body>
 </html>

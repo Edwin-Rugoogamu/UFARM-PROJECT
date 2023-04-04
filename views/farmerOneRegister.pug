@@ -11,50 +11,50 @@ head
   #famtwo.container-fluid
     .row
       .col-xs-12.col-lg-3.col-md-3
-        a.send(href='../Main/fontPage.html')
+        a.send(href='./homepageAo')
           h1 UFARM 
         p.far2 Register FarmerOne to grant them access.
       // form
       #foRegister.col-xs-12.col-lg-6.col-md-6
         h3 Registration Form
         fieldset
-          form(action='' method='')
+          form(action='./farmerOneRegister' onsubmit="" method='POST')
             // firstName
             div
               label(for='') firstName
               br
-              input(type='text' name='firstName' style='width: 100%;')
+              input(type='text' name='firstname' style='width: 100%;')
               br
               small#errorFirst
             // secondname
             div
               label(for='') secondName
               br
-              input(type='text' name='secondName' style='width: 100%' ;='')
+              input(type='text' name='secondname' style='width: 100%')
               br
               small#errorSecond
             // ward
             div
               label(for='ward1') Ward 1
-              input#ward1(type='radio' name='ward')
+              input#ward1(type='radio' name='ward1')
               label(for='ward2') Ward 2
-              input#ward2(type='radio' name='ward')
+              input#ward2(type='radio' name='ward2')
               label(for='ward3') Ward 3
-              input#ward3(type='radio' name='ward')
+              input#ward3(type='radio' name='ward3')
               label(for='ward4') Ward 4
-              input#ward4(type='radio' name='ward')
+              input#ward4(type='radio' name='ward4')
               br
               small#error3
             // unique FO number
             div
-              input#foNumber(type='text' placeholder='FO number' style='width: 100%')
+              input#foNumber(type='text' placeholder='FO number' style='width: 100%' name="uniqueNo")
               br
               small#error4
             // date of registration
             div
               label(for='regDate') Date of registration
               br
-              input#regDate(type='date' name='date of registration' style='width: 100%')
+              input#regDate(type='date' name='DOR' style='width: 100%')
               br
               small#error5
             // gender
@@ -67,60 +67,60 @@ head
             div
               label(for='foBirth') Date of Birth
               br
-              input#foBirth(type='date' name='fobirth' style='width: 100%')
+              input#foBirth(type='date' name='dobirth' style='width: 100%')
               br
               small#error5
             // activities involved
-            div
-              label(for='' style='font-weight: 600;') Activities
-              br
-              input(type='checkbox' name='' id='')
-              | Register Urban Farmers 
-              br
-              input(type='checkbox' name='' id='')
-              | Inspect produce 
-              br
-              input(type='checkbox' name='' id='')
-              | Approve Produce
-              br
-              input.yaa(type='checkbox' name='' id='')
-              |  See bookings and orders
-              br
-              small#error6
+            //- div
+            //-   label(for='' style='font-weight: 600;') Activities
+            //-   br
+            //-   input(type='checkbox' name='' id='')
+            //-   | Register Urban Farmers 
+            //-   br
+            //-   input(type='checkbox' name='' id='')
+            //-   | Inspect produce 
+            //-   br
+            //-   input(type='checkbox' name='' id='')
+            //-   | Approve Produce
+            //-   br
+            //-   input.yaa(type='checkbox' name='' id='')
+            //-   |  See bookings and orders
+            //-   br
+            //-   small#error6
             // nin
             div
-              input(type='text' placeholder='NIN number' style='width: 100%')
+              input(type='text' placeholder='NIN number' style='width: 100%' name="ninNumber")
               br
               small#error7
             // phone number
             div
               label(for='') Phone Number
               br
-              input(type='number' name='' id='' style='width: 100%')
+              input(type='number' name='phonenumber' id='' style='width: 100%')
               br
               small#error8
             // location
             div
               label(for='residence') Place of Residence
               br
-              input#residence.residence(type='text' name='place of residence' style='width: 100%')
+              input#residence.residence(type='text' name='placeOfResidence' style='width: 100%')
               br
               small#error9
             // resdence type
             div
               label(for='residenceType') Residence Type
               br
-              input#residenceType.residencetype(type='text' name=' residence type' style='width: 100%')
+              input#residenceType.residencetype(type='text' name=' residenceType' style='width: 100%')
               br
               small#error10
             // period of stay in ward
             div
               label(for='') Period of Stay in Ward
               br
-              input(type='number' id='')
+              input(type='number' id='' name="periodOfStay")
               br
               small#error11  Above 10 years
-            button.sub SUBMIT
+            button.sub(type="submit") SUBMIT
       .col-xs-12.col-lg-3.col-md-3
 script(src='../index.js')
 script(src='../bootstrap/js/bootstrap.js')
