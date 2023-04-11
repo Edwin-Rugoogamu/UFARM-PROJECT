@@ -3,12 +3,10 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  
-
+  title Home Page
   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css' integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==' crossorigin='anonymous' referrerpolicy='no-referrer')
   link(rel='stylesheet' href='../bootstrap/css/bootstrap.css')
   link(rel='stylesheet' href='../style.css')
-  title Home Page
 .home-page-1
   .home-page-2
     .container-fluid
@@ -22,7 +20,7 @@ head
                 i.fa-brands.fa-pagelines(style='color: green')
                 a(href='../Main/fontPage.html' style='color: green;text-decoration: none;')  UFARM
               // bootstrap nav bar
-              .col(style='background-color: white;')
+              .col(style='background-color: none;')
                 nav.navbar.navbar-expand-lg.bg-body-tertiary
                   .container-fluid
                     button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
@@ -86,43 +84,1000 @@ head
           p different options 
     // end container 4
     // begin container 5
-    .container-fluid
+    #categories.container-fluid
       .row
         #cont-pic.col
           h1 Top categories
           .container
             #catego.row
-              .col
-                span.cat
-                  img(src='../images/cabbage.jpg' alt='' style='width: 70px; border-radius: 50px;')
-                  br
-                  |                        Fruits
-              .col
-                span.cat
-                  img(src='../images/cabbage.jpg' alt='' style='width: 70px; border-radius: 50px;')
-                  br
-                  |                      Vegetable
-              .col
-                span.cat
-                  img(src='../images/eggs.jpg' alt='' style='width: 70px; border-radius: 50px;')
-                  br
-                  |                      Eggs
-              .col
-                span.cat
-                  img(src='../images/meats.jpg' alt='' style='width: 70px; border-radius: 50px;')
-                  br
-                  |                        Meats
-              .col
-                span.cat
-                  img(src='../images/drinks.jpg' alt='' style='width: 70px; border-radius: 50px;')
-                  br
-                  |                        Drinks
+              //
+                <div class="col">
+                <span class="cat">
+                <img src="../images/3 oranges.jpg" alt="" style="width: 70px; border-radius: 50px;"><br>
+                Fruits
+                </span>
+                </div>
+                <div class="col"> <span class="cat">
+                <img src="../images/cabbage.jpg" alt="" style="width: 70px; border-radius: 50px;"><br>
+                Vegetable
+                </span></div>
+                <div class="col"> <span class="cat">
+                <img src="../images/eggs.jpg" alt="" style="width: 70px; border-radius: 50px;"><br>
+                Eggs
+                </span></div>
+                <div class="col">
+                <span class="cat">
+                <img src="../images/meats.jpg" alt="" style="width: 70px; border-radius: 50px;"><br>
+                Meats
+                </span>
+                </div>
+                <div class="col">
+                <span class="cat">
+                <img src="../images/drinks.jpg" alt="" style="width: 70px; border-radius: 50px;"><br>
+                Drinks
+                </span>
+                </div>
+              #carouselExampleAutoplaying.carousel.slide(data-bs-ride='carousel')
+                .carousel-inner
+                  .carousel-item.active
+                    img#live.rounded.float-start(src='../images/drinks.jpg' alt='...')
+                    img#live.rounded.float-start(src='../images/cabbage.jpg' alt='...')
+                    img#live.rounded.float-start(src='../images/meats.jpg' alt='...')
+                  .carousel-item
+                    img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+                    img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+                    img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+                  .carousel-item
+                    img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+                    img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+                    img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+                button.carousel-control-prev(type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='prev')
+                  span.carousel-control-prev-icon(aria-hidden='true')
+                  span.visually-hidden Previous
+                button.carousel-control-next(type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='next')
+                  span.carousel-control-next-icon(aria-hidden='true')
+                  span.visually-hidden Next
     // end container 5
-    // begin container 6
-    .container(id='')
+    #trend.container
       .row
-        .col Left column
-        .col Right column
+        .col
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+    // begin container 6
+    #trend.container
+      .row
+        .col
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
     // end of container 6
+    // begin container 7
+    #trend.container
+      .row
+        .col
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+    // end of container 7
+    // begin container 8
+    #trend.container
+      .row
+        .col
+          h5 Top Selling Items
+          #carouselExample.carousel.slide
+            .carousel-inner
+              .carousel-item.active
+                .card(href='#')
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+            button.carousel-control-prev(type='button' data-bs-target='#carouselExample' data-bs-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.visually-hidden Previous
+            button.carousel-control-next(type='button' data-bs-target='#carouselExample' data-bs-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.visually-hidden Next
+    // end of container 8
+    // begin container 9
+    #trend.container
+      .row
+        .col
+          h5 Top Selling Items
+          #carouselExample.carousel.slide
+            .carousel-inner
+              .carousel-item.active
+                .card(href='#')
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+            button.carousel-control-prev(type='button' data-bs-target='#carouselExample' data-bs-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.visually-hidden Previous
+            button.carousel-control-next(type='button' data-bs-target='#carouselExample' data-bs-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.visually-hidden Next
+    // end of container 9
+    // begin container 10
+    #trend.container
+      .row
+        .col
+          h5 Top Selling Items
+          #carouselExample.carousel.slide
+            .carousel-inner
+              .carousel-item.active
+                .card(href='#')
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+            button.carousel-control-prev(type='button' data-bs-target='#carouselExample' data-bs-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.visually-hidden Previous
+            button.carousel-control-next(type='button' data-bs-target='#carouselExample' data-bs-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.visually-hidden Next
+    // end of container 10
+    // begin container 11
+    #trend.container
+      .row
+        #donotmiss.col-12 DO&apos;NOT MISS OUT ON THESE
+        .col
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img.rounded.float-start(src='../images/eggs.jpg' alt='...')
+    // end of container 11
+    // begin container 12
+    #trend.container
+      .row
+        .col
+          h5 Top Selling Items
+          #carouselExample.carousel.slide
+            .carousel-inner
+              .carousel-item.active
+                .card(href='#')
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+            button.carousel-control-prev(type='button' data-bs-target='#carouselExample' data-bs-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.visually-hidden Previous
+            button.carousel-control-next(type='button' data-bs-target='#carouselExample' data-bs-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.visually-hidden Next
+    // end of container 12
+    // begin container 13
+    #trend.container
+      .row
+        #donotmiss.col-12 LIVE
+        .col
+          img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+          img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+    // end of container 13
+    // begin container 14
+    #trend.container
+      .row
+        .col
+          h5 Top Deals
+          #carouselExample.carousel.slide
+            .carousel-inner
+              .carousel-item.active
+                .card(href='#')
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+            button.carousel-control-prev(type='button' data-bs-target='#carouselExample' data-bs-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.visually-hidden Previous
+            button.carousel-control-next(type='button' data-bs-target='#carouselExample' data-bs-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.visually-hidden Next
+    // end of container 14
+    // begin container 15
+    #trend.container
+      .row
+        .col-12 coming soon
+        .col
+          img.img-fluid(src='../images/eggs.jpg' alt='...' style='height: 200px; width: 100%;margin-bottom: 10px')
+    // end of container 15
+    // begin container 16
+    #trend.container
+      .row
+        .col
+          h5 Top Deals
+          #carouselExample.carousel.slide
+            .carousel-inner
+              .carousel-item.active
+                .card(href='#')
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+            button.carousel-control-prev(type='button' data-bs-target='#carouselExample' data-bs-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.visually-hidden Previous
+            button.carousel-control-next(type='button' data-bs-target='#carouselExample' data-bs-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.visually-hidden Next
+    // end of container 16
+    // begin container 17
+    #trend.container
+      .row
+        .col-12 coming soon
+        .col
+          img.img-fluid(src='../images/eggs.jpg' alt='...' style='height: 200px; width: 100%;margin-bottom: 10px;')
+    // end of container 17
+    // begin container 18
+    #trend.container
+      .row
+        .col
+          h5 Top Deals
+          #carouselExample.carousel.slide
+            .carousel-inner
+              .carousel-item.active
+                .card(href='#')
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+              .carousel-item
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+                .card
+                  img.card-img-top(src='../images/eggs.jpg' alt='...')
+                  .card-body
+                    label.card-text(for='') green
+                    br
+                    label(for='') UGx3000
+            button.carousel-control-prev(type='button' data-bs-target='#carouselExample' data-bs-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.visually-hidden Previous
+            button.carousel-control-next(type='button' data-bs-target='#carouselExample' data-bs-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.visually-hidden Next
+    // end of container 18
 script(src='../index.js')
 script(src='../bootstrap/js/bootstrap.js')

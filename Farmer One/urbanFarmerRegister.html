@@ -13,68 +13,78 @@
     <div class="container-fluid" id="uFarmer" > 
         <div class="row"> 
            <div class="col-xs-12 col-lg-3 col-md-3">
-            <a href="../Main/fontPage.html" class="send">  <h1 >UFARM </h1> </a> 
+            <a href="./homepageFo" class="send">  <h1 >UFARM </h1> </a> 
             <p class="far2">Register Urban Farmer to grant them access.</p>
            </div>
            <div class="col-xs-12 col-lg-6 col-md-6" id="uFarmer2">
-            <form action="">
+            <form action="./urbanFarmerRegister" onsubmit="return validate4()" method="POST">
                 <h3>REGISTRATION FORM </h3>
                 <!-- firstName -->
                 <div>
                 <label for="">First Name</label><br>
-                <input type="text" style="width: 100%"><br>
+                <input type="text" style="width: 100%" name="firstName" id="firstname"><br>
                 </div>
                 <!-- second name -->
                 <div>
                 <label for="">Second Name</label><br>
-                <input type="text" style="width: 100%"><br>
+                <input type="text" style="width: 100%" name=" secondName"><br>
                 </div>
+                 
+                  <!-- unique FO number -->
+                  <div>
+                    <input type="password" placeholder="password" id="foNumber" style="width: 100%" name="password"><br>
+                    <small id="error4"></small>
+                    </div>
+                    <!-- email -->
+                 <div>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" style="width: 100%" id="email">
+                 </div>
                 <!-- gender -->
                 <div>
                 <label for="">Male</label>
-                <input type="radio"name="gender">
+                <input type="radio"name="gender" value="male">
                 <label for="">Female</label>
-                <input type="radio" name="gender"><br>
+                <input type="radio" name="gender" value="female"><br>
                 </div>
                 <!-- date of registration -->
                 <div>
                  <label for="">Date of registration</label><br>
-                 <input type="date" style="width: 100%"><br>
+                 <input type="date" style="width: 100%" name="DOR" id="date"><br>
                 </div>
                  <!-- date of birth -->
                  <div>
                  <label for="">Date of Birth</label><br>
-                 <input type="date" style="width: 100%"><br>
+                 <input type="date" style="width: 100%" name=" dobirth" id="dob"><br>
                  </div>
-                 <!-- activities undertaken -->
+                 <!-- role -->
                  <div>
-                 <label for="">Activities undertaken</label><br>
-                 <input type="checkbox" name="" id="">Upload Products <br>
-                 
-                 <input type="checkbox" name="" id="">Upload produce <br>
-                 </div>
-                 <!-- contacts -->
+                    <label for="role">Role</label><br>
+                    <select name="role" >
+                        <option value="urbanfarmer" id="role">Urban Farmer</option>  
+                    </select>
+                       </div>
                  <div>
+                    <!-- personal number -->
                  <label for="">Personal No.</label><br>
-                 <input type="number" name="" id="" style="width: 100%" ><br>
+                 <input type="number" name="phonenumber" id="phonenumber" style="width: 100%" ><br>
                  <label for="">Other No.</label><br>
-                 <input type="number" name="" id="" style="width: 100%"><br>
+                 <input type="number" name="othernumber" id="othernumber" style="width: 100%"><br>
                  </div>
                  <!-- nin -->
                  <div>
-                 <input type="text" placeholder="NIN number"><br>
+                 <input type="text" placeholder="NIN number" name="ninNumber" id="ninNumber"><br>
                  </div>
-                 <!-- ward -->
-                 <div>
-                 <label for="ward1">Ward 1</label>
-                 <input type="radio"name="ward" id="ward1">
-                 <label for="ward2">Ward 2</label>
-                 <input type="radio" name="ward" id="ward2">
-                 <label for="ward3">Ward 3</label>
-                 <input type="radio"name="ward" id="ward3">
-                 <label for="ward4">Ward 4</label>
-                 <input type="radio" name="ward" id="ward4"><br>
-                 </div>
+                <!-- ward -->
+                 <div class="wardclass">
+                 <label for="">Select user Ward</label><br>
+                 <select name="user" id="users" class="users">
+                     <option value="ward1" name="ward1">Ward 1</option>
+                     <option value="ward2" name="ward2">Ward 2</option>
+                     <option value="ward3" name="ward3">Ward 3</option>
+                     <option value="ward4" name="ward4">Ward 4</option>
+                 </select>
+                    </div>
                  <!-- submit -->
                  <button  type="submit" value="register" id="UFregister" class="sub" >Submit</button>
 

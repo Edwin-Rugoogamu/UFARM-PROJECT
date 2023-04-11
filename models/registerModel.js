@@ -10,12 +10,17 @@ const registerSchema = new mongoose.Schema({
   secondName:{
     type:String,
     trim:true
+    
   },
   email:{
     type:String,
     trim:true,
     unique:true,
     
+  },
+  role:{
+    type:String,
+    trim:true
   },
   password:{
     type:String,
@@ -33,19 +38,52 @@ const registerSchema = new mongoose.Schema({
   },
   gender:{
     type:String,
-    trim:true
+    trim:true,
+    
   },
-  customer:{
+  DOR:{
     type:String,
-    trim:true
+    trim:true,
+    default:null
   },
-  Agricultural_Officer:{
+  dobirth:{
+    type:String,
+    trim:true,
+    default:null
+  },
+  ninNumber:{
+    type:String,
+    trim:true,
+    default:null
+  },
+  phonenumber:{
+    type:String,
+    trim:true,
+    default:null
+  },
+  othernumber:{
     type:Number,
-    trim:true
+    trim:true,
+    default:null
+  },
+  placeOfResidence:{
+    type:String,
+    trim:true,
+    default:null
+  },
+  residenceType:{
+    type:String,
+    trim:true,
+    default:null
   },
   user:{
     type:String,
     trim:true
+  },
+  periodOfStay:{
+    type:Number,
+    trim:true,
+    default:null
   },
 
 });

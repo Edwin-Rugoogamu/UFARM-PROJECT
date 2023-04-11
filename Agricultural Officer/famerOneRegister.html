@@ -28,99 +28,98 @@
            <div class="col-xs-12 col-lg-6 col-md-6" id="foRegister">
             <h3>Registration Form</h3>
             <fieldset>
-            <form action="" method="">
+            <form action="./farmerOneRegister" onsubmit="return validate3()" method="POST">
                 <!-- firstName -->
                 
                 <div>
                 <label for="">firstName</label><br>
-                <input type="text" name="firstName" style="width: 100%;"><br>
+                <input type="text" name="firstName" style="width: 100%;" id="firstname"><br>
                  <small id="errorFirst"></small>
                 </div>
                  <!-- secondname  -->
                  <div>
                  <label for="">secondName</label><br>
-                <input type="text" name="secondName" style="width: 100%";><br>
+                <input type="text" name="secondName" style="width: 100%"; id="secondname"><br>
                  <small id="errorSecond"></small>
                  </div>
-                 <!-- ward -->
+                 <!-- email -->
                  <div>
-                 <label for="ward1" >Ward 1</label>
-                 <input type="radio"name="ward" id="ward1">
-                 <label for="ward2">Ward 2</label>
-                 <input type="radio" name="ward" id="ward2">
-                 <label for="ward3">Ward 3</label>
-                 <input type="radio"name="ward" id="ward3">
-                 <label for="ward4">Ward 4</label>
-                 <input type="radio" name="ward" id="ward4"><br>
-                 <small id="error3"></small>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" style="width: 100%" id="email">
                  </div>
+                 <!-- role -->
+                 <div>
+                    <label for="role" id="role">Role</label><br>
+                    <select name="role" >
+                        <option value="farmerone">farmerone</option>  
+                    </select>
+                       </div>
+                 <!-- ward -->
+               
+                 <div class="wardclass">
+                    <label for="" id="ward">Select user Ward</label><br>
+                    <select name="user" id="users" class="users">
+                        <option value="ward1">Ward 1</option>
+                        <option value="ward2">Ward 2</option>
+                        <option value="ward3" >Ward 3</option>
+                        <option value="ward4" >Ward 4</option>
+                    </select>
+                       </div>
                  <!-- unique FO number -->
                  <div>
-                 <input type="text" placeholder="FO number" id="foNumber" style="width: 100%"><br>
+                 <input type="password" placeholder="FO number" id="foNumber" style="width: 100%" name="password"><br>
                  <small id="error4"></small>
                  </div>
                 
                  <!-- date of registration -->
                  <div>
                  <label for="regDate">Date of registration</label><br>
-                 <input type="date" name="date of registration" id="regDate" style="width: 100%"><br>
+                 <input type="date" name="DOR" id="regDate" style="width: 100%"><br>
                  <small id="error5"></small>
                  </div>
                  <!-- gender -->
                  <div>
-                 <label for="">Male</label>
-                 <input type="radio"name="gender">
+                 <label for="male">Male</label>
+                 <input type="radio"name="gender" value="male">
                  <label for="">Female</label>
-                 <input type="radio" name="gender" class="yaa">
+                 <input type="radio" name="gender" class="yaa" value="female">
                  </div>
                  <!-- date of birth -->
                  <div>
                  <label for="foBirth">Date of Birth</label><br>
-                 <input type="date" name="fobirth" id="foBirth"style="width: 100%"><br>
+                 <input type="date" name=" dobirth" id="foBirth"style="width: 100%"><br>
                  <small id="error5"></small>
                  </div>
-                 <!-- activities involved -->
+              <!-- ninNumber -->
                  <div>
-                 <label for="" style="font-weight: 600;">Activities</label><br>
-                 <input type="checkbox" name="" id="">Register Urban Farmers <br>
-                 
-                 <input type="checkbox" name="" id="">Inspect produce <br>
-                 
-                 <input type="checkbox" name="" id="">Approve Produce<br>
-                 
-                 <input type="checkbox" name="" id="" class="yaa"> See bookings and orders<br>
-                 <small id="error6"></small>
-                 </div>
-                 <!-- nin -->
-                 <div>
-                 <input type="text" placeholder="NIN number" style="width: 100%"><br>
+                 <input type="text" placeholder="NIN number" style="width: 100%" name=" ninNumber" id="ninNumber"><br>
                  <small id="error7"></small>
                  </div>
                  <!-- phone number -->
                  <div>
                  <label for="">Phone Number</label><br>
-                 <input type="number" name="" id="" style="width: 100%"><br>
+                 <input type="number" name="phonenumber" id="phonenumber" style="width: 100%"><br>
                  <small id="error8"></small>
                  </div>
                  <!-- location -->
                  <div>
                  <label for="residence" >Place of Residence</label><br>
-                 <input type="text" id="residence" class="residence" name="place of residence" style="width: 100%"><br>
+                 <input type="text" id="residence" class="residence" name="  placeOfResidence" style="width: 100%"><br>
                  <small id="error9"></small>
                  </div>
                   <!-- resdence type  -->
                   <div>
                   <label for="residenceType" >Residence Type</label><br>
-                  <input type="text" id="residenceType" class="residencetype" name=" residence type" style="width: 100%"><br>
+                  <input type="text" id="residenceType" class="residencetype" name="residenceType" style="width: 100%"><br>
                   <small id="error10"></small>
                   </div>
                   <!-- period of stay in ward -->
                   <div>
                   <label for="">Period of Stay in Ward</label><br>
-                  <input type="number" id=""  ><br>
+                  <input type="number" id="periodOfStay" name=" periodOfStay" ><br>
                   <small id="error11"> Above 10 years</small>
                   </div>
-                  <button class="sub" >SUBMIT</button>
+                  <button class="sub" type="submit" >SUBMIT</button>
               
             </form>
             </fieldset>

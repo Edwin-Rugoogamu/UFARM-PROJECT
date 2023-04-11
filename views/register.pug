@@ -41,19 +41,19 @@ head
             // gender
             div
               label(for='Male') Male
-              input#check1(type='radio' name='gender' for='check1')
+              input#check1(type='radio' name='gender' value='male' for='check1')
             div
               label(for='Female') Female
-              input#check2(type='radio' name='gender' for='check2')
+              input#check2(type='radio' name='gender' value='female' for='check2')
               br
               small.error
-            // select usertype
+            // select Role
             div
               label(for='') Select user Type
               br
-              select#users.users(name='user')
-                option(value='Customer' name='customer') Customer
-                option(value='Agricultural Officer' name='Agricultural_Officer') Agricultural Officer
+              select#users.users(name='role')
+                option(value='Customer') Customer
+                option(value='Agricultural Officer') Agricultural Officer
               br
             // submit
             button#register-submit(type='submit') Submit

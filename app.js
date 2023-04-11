@@ -6,7 +6,7 @@ const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
 const passport = require("passport")
 const session = require("express-session")
-
+require("dotenv").config()
 
 app.set("view engine","pug")
 app.set("views",path.join(__dirname,"views"))
@@ -18,6 +18,7 @@ const homepage=require("./routes/homepageRouter")
 const fontpage=require("./routes/fontpageRouter")
 const register=require("./routes/registerRouter")
 const login=require("./routes/loginRouter")
+const registeredFO = require("./routes/aoRoutes")
 
 
 app.use(bodyParser.json());
@@ -57,6 +58,7 @@ app.use("/",homepage)
 app.use("/",fontpage)
 app.use("/",register)
 app.use("/",login)
+app.use("/",registeredFO)
 
 
 app.get("*", (req, res)=>{

@@ -1,9 +1,4 @@
-edwin# UFARM-PROJECT
-  
-
-
-  <!-- registered -->
-  doctype html
+doctype html
 head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
@@ -16,7 +11,7 @@ head
     legend
       center
         h2
-          b Farmer Ones Registered
+          b Farmer One Dashboard
     br
       
     .container
@@ -48,14 +43,14 @@ head
             if urbanFarmers.length 
                 each urbanFarmer in urbanFarmers
                     tr
-                        td #{urbanFarmer.firstName} #{urbanFarmer.secondName}
-                        td #{urbanFarmer.email}
-                        td #{urbanFarmer.role}
-                        td #{urbanFarmer.password}
+                        td #{urbanFarmer.firstname} #{urbanFarmer.lastname}
+                        td #{urbanFarmer.username}
+                        td #{urbanFarmer.dob}
                         td #{urbanFarmer.gender}
-                        td #{urbanFarmer.DOR}
-                        td #{urbanFarmer.dobirth}
-                        td #{urbanFarmer.ninNumber}
+                        td #{urbanFarmer.email}
+                        td #{urbanFarmer.phonenumber}
+                        td #{urbanFarmer.address}
+                        td #{urbanFarmer.ward}
                         td 
                         //-     form(method='post', action='/students/delete')
                         //-         input(type='hidden', name="id", value=student._id)
