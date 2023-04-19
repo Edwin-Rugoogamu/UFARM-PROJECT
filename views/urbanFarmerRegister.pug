@@ -10,33 +10,33 @@ head
   #uFarmer.container-fluid
     .row
       .col-xs-12.col-lg-3.col-md-3
-        a.send(href='../Main/fontPage.html')
+        a.send(href='./homepageFo')
           h1 UFARM 
         p.far2 Register Urban Farmer to grant them access.
       #uFarmer2.col-xs-12.col-lg-6.col-md-6
-        form(action='./urbanFarmerRegister' onsubmit='' method='POST')
+        form(action='./urbanFarmerRegister' onsubmit='return validate4()' method='POST')
           h3 REGISTRATION FORM 
           // firstName
           div
             label(for='') First Name
             br
-            input(type='text' style='width: 100%' name='firstName')
+            input#firstname(type='text' style='width: 100%' name='firstName')
             br
           // second name
           div
             label(for='') Second Name
             br
-            input(type='text' style='width: 100%' name=' secondName')
+            input#secondName(type='text' style='width: 100%' name=' secondName')
             br
-          // email
           // unique FO number
           div
-            input#foNumber(type='password' placeholder='password' style='width: 100%' name='password')
+            input#foNumber(type='password' placeholder='Unique Id' style='width: 100%' name='password')
             br
             small#error4
+          // email
           div
             label(for='email') Email
-            input(type='text' name='email' style='width: 100%')
+            input#email(type='text' name='email' style='width: 100%')
           // gender
           div
             label(for='') Male
@@ -48,33 +48,39 @@ head
           div
             label(for='') Date of registration
             br
-            input(type='date' style='width: 100%' name='DOR')
+            input#date(type='date' style='width: 100%' name='DOR')
             br
           // date of birth
           div
             label(for='') Date of Birth
             br
-            input(type='date' style='width: 100%' name='dobirth')
+            input#dob(type='date' style='width: 100%' name=' dobirth')
             br
           // role
           div
             label(for='role') Role
             br
             select(name='role')
-              option(value='urbanfarmer') Urban Farmer
+              option#role(value='urbanfarmer') Urban Farmer
+                // activities
           div
-            // personal number
+            h5 Activity
+            label(for='male') Upload Products
+            input(type='checkbox' name='activities' value='Upload Products')
+            br
+          // personal number  
+          div
             label(for='') Personal No.
             br
-            input(type='number' name='phonenumber' id='' style='width: 100%')
+            input#phonenumber(type='number' name='phonenumber' style='width: 100%')
             br
             label(for='') Other No.
             br
-            input(type='number' name='othernumber' id='' style='width: 100%')
+            input#othernumber(type='number' name='othernumber' style='width: 100%')
             br
           // nin
           div
-            input(type='text' placeholder='NIN number' name='ninNumber')
+            input#ninNumber(type='text' placeholder='NIN number' name='ninNumber')
             br
           // ward
           .wardclass

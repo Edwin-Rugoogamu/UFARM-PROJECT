@@ -1,0 +1,113 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Urban Farmer
+  link(rel='stylesheet' href='../style.css')
+  link(rel='stylesheet' href='../bootstrap/css/bootstrap.css')
+.urbanf
+  .urbanf2
+    .container
+      .row
+        .col
+          h1 Urban Farmer
+          p Upload Products 
+        .col-lg-6
+          fieldset#urbanf3
+            form(action='homepageUf' onsubmit='' method='POST' enctype='multipart/form-data')
+              // Name
+              div
+                label(for='') Name
+                br
+                input#name(type='text' name='name' style='width: 100%;')
+                br
+                small#errorFirst
+              // image
+              div
+                label(for='') Image
+                br
+                input#image(type='file' name='image' style='width: 100%;')
+                br
+                small#errorFirst
+              // ward Name
+              .wardclass
+                label(for='Transportation mode') Ward
+                br
+                select#ward.users(name='ward')
+                  option(value='ward1') ward1
+                  option(value='ward2') ward2
+                  option(value='ward3') ward3
+              // Date
+              div
+                label(for='') Date
+                br
+                input#date(type='date' name='date' style='width: 100%;')
+                br
+                small#errorFirst
+              // Price
+              div
+                label(for='') Price
+                br
+                input#price(type='number' name='price' style='width: 100%;')
+                br
+                small#errorFirst
+                //- product category
+              div      
+                select#residence.drop(name='productcategory')
+                  option(value='') Select Category  
+                  option(value='horticultureProduce') Horticulture Produce 
+                  option(value='poultry') Poultry 
+                  option(value='dairyProducts') Dairy Products
+                //- product category
+              // quantity
+              div
+                label(for='') Quantity
+                br
+                input#quantity(type='number' name='quantity' style='width: 100%;')
+                br
+                small#errorFirst
+              // mode of payment
+              .wardclass
+                label(for='Payment mode') Mode of Payment
+                br
+                select#payment.users(name='mode_of_payment')
+                  option(value='Cash') Cash
+                  option(value='Mobile Money') Mobile Money
+              // direction
+              div
+                label(for='') Directions
+                br
+                input#directions(type='text' name='directions' style='width: 100%;')
+                br
+                small#errorFirst
+              // mode of delivery
+              .wardclass
+                label(for='Transportation mode') Mode of Payment
+                br
+                select#delivery.users(name='mode_of_delivery')
+                  option(value='Pick up') Pick up
+                  option(value='Home delivery') Home delivery
+              // Produce Type
+              .wardclass
+                label(for='Transportation mode') Produce Type
+                br
+                select#ward.users(name='produce_type')
+                  option(value='organic') organic
+                  option(value='none organic') none organic
+                br  
+                br 
+              // availability
+              .wardclass
+                label(for='availability') Availability
+                br
+                select#ward.users(name='availability')
+                  option(value='available') available
+                  option(value='N/A') N/A
+                br  
+                br  
+              div
+                button(type='submit') UPLOAD
+        .col
+script(src='../index.js')
+script(src='../bootstrap/js/bootstrap.js')

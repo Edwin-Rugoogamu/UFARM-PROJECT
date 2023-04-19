@@ -11,41 +11,41 @@ head
   #famtwo.container-fluid
     .row
       .col-xs-12.col-lg-3.col-md-3
-        a.send(href='../Main/fontPage.html')
+        a.send(href='fontPage')
           h1 UFARM 
         p.far2 Register FarmerOne to grant them access.
       // form
       #foRegister.col-xs-12.col-lg-6.col-md-6
         h3 Registration Form
         fieldset
-          form(action='./farmerOneRegister' onsubmit='' method='POST')
+          form(action='./farmerOneRegister' onsubmit='return validate3()' method='POST')
             // firstName
             div
               label(for='') firstName
               br
-              input(type='text' name='firstName' style='width: 100%;')
+              input#firstname(type='text' name='firstName' style='width: 100%;')
               br
               small#errorFirst
             // secondname
             div
               label(for='') secondName
               br
-              input(type='text' name='secondName' style='width: 100%;')
+              input#secondname(type='text' name='secondName' style='width: 100%' )
               br
               small#errorSecond
             // email
             div
               label(for='email') Email
-              input(type='text' name='email' style='width: 100%')
+              input#email(type='text' name='email' style='width: 100%')
             // role
             div
-              label(for='role') Role
+              label#role(for='role') Role
               br
               select(name='role')
                 option(value='farmerone') farmerone
             // ward
             .wardclass
-              label(for='') Select user Ward
+              label#ward(for='') Select user Ward
               br
               select#users.users(name='user')
                 option(value='ward1') Ward 1
@@ -54,7 +54,7 @@ head
                 option(value='ward4') Ward 4
             // unique FO number
             div
-              input#foNumber(type='password' placeholder='password' style='width: 100%' name='password')
+              input#foNumber(type='password' placeholder='FO number' style='width: 100%' name='password')
               br
               small#error4
             // date of registration
@@ -70,30 +70,41 @@ head
               input(type='radio' name='gender' value='male')
               label(for='') Female
               input.yaa(type='radio' name='gender' value='female')
+            // activities
+            div
+              h5 Activities
+              label(for='male') Register Urban Farmers
+              input(type='checkbox' name='activities' value='Register Urban Farmers')
+              br
+              label(for='') Inspect and approve  Agricultural Produce
+              input.yaa(type='checkBox' name='activities' value='Inspect and approve  Agricultural Produce')
+              br
+              label(for='') See all bookings and orders
+              input.yaa(type='checkbox' name='activities' value='See all bookings and orders')
             // date of birth
             div
               label(for='foBirth') Date of Birth
               br
-              input#foBirth(type='date' name='dobirth' style='width: 100%')
+              input#foBirth(type='date' name=' dobirth' style='width: 100%')
               br
               small#error5
             // ninNumber
             div
-              input(type='text' placeholder='NIN number' style='width: 100%' name='ninNumber')
+              input#ninNumber(type='text' placeholder='NIN number' style='width: 100%' name=' ninNumber')
               br
               small#error7
             // phone number
             div
               label(for='') Phone Number
               br
-              input(type='number' name='phonenumber' id='' style='width: 100%')
+              input#phonenumber(type='number' name='phonenumber' style='width: 100%')
               br
               small#error8
             // location
             div
               label(for='residence') Place of Residence
               br
-              input#residence.residence(type='text' name='placeOfResidence' style='width: 100%')
+              input#residence.residence(type='text' name='  placeOfResidence' style='width: 100%')
               br
               small#error9
             // resdence type
@@ -107,10 +118,10 @@ head
             div
               label(for='') Period of Stay in Ward
               br
-              input(type='number' id='' name='periodOfStay')
+              input#periodOfStay(type='number' name=' periodOfStay')
               br
               small#error11  Above 10 years
-            button.sub SUBMIT
+            button.sub(type='submit') SUBMIT
       .col-xs-12.col-lg-3.col-md-3
 script(src='../index.js')
 script(src='../bootstrap/js/bootstrap.js')

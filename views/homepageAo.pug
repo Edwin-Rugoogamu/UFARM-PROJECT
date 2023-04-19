@@ -8,16 +8,58 @@ head
   link(rel='stylesheet' href='../bootstrap/css/bootstrap.css')
 #famOne1
   #famtwo2.container-fluid
+    // nav
+    nav.navbar.fixed-top
+      .container-fluid
+        // <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
+        a.u-fo(href='./fontPage')
+          h1 UFARM
+        button.navbar-toggler(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasDarkNavbar' aria-controls='offcanvasDarkNavbar' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #offcanvasDarkNavbar.offcanvas.offcanvas-end.text-bg-dark(tabindex='-1' aria-labelledby='offcanvasDarkNavbarLabel')
+          .offcanvas-header
+            h5#offcanvasDarkNavbarLabel.offcanvas-title Dark offcanvas
+            button.btn-close.btn-close-white(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+          .offcanvas-body
+            ul.navbar-nav.justify-content-end.flex-grow-1.pe-3
+              li.nav-item
+                // <a class="nav-link active" aria-current="page" href="#">Home</a>
+                a(href='./login')
+                  button.btn.btn-outline-success(type='button')  LOGOUT 
+              li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                  | Dropdown
+                ul.dropdown-menu.dropdown-menu-dark
+                  li
+                    a.dropdown-item(href='#') Action
+                  li
+                    a.dropdown-item(href='#') Another action
+                  li
+                    hr.dropdown-divider
+                  li
+                    a.dropdown-item(href='#') Something else here
+            form.d-flex.mt-3(role='search')
+              input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
+              button.btn.btn-success(type='submit') Search
+    // nav
     .row
       .col
-        p
-          | Register a Farmer One 
-          button REGISTER
-        div
+        // <a href="./fontPage" class="u-fo"><h1 >UFARM</h1></a>
+        .success1
+          p  Register a Farmer One
+          a(href='./farmerOneRegister')
+            button.btn.btn-outline-success(type='button')  Register 
+          p
+            | Provide the different in formation of the farmer One and provide a Unique Number to the Farmerone for Registration
+        .success2
           h3 Registered Farmer Ones
-         
+          a(href='./registeredFarmerOnes')
+            button.btn.btn-outline-success(type='button') RegisteredFo
+          p
+            | Find the farmers you registered in the following dashboard where you will be able to edit the farmerOnes.
         // new
         div
           h3 Appoint New Farmer One
 link(rel='stylesheet' href='../index.js')
 link(rel='stylesheet' href='../bootstrap/js/bootstrap.js')
+script(src='../bootstrap/js/bootstrap.js')

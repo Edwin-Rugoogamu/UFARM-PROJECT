@@ -7,19 +7,73 @@ head
   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css' integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==' crossorigin='anonymous' referrerpolicy='no-referrer')
   link(rel='stylesheet' href='../style.css')
   link(rel='stylesheet' href='../bootstrap/css/bootstrap.css')
-.ufarmer4 
-  .ufarmer5  
-    .container
+.ufarmer4
+  .ufarmer5
+    .container-fluid
       .row
         .col
-          a(href='../Main/fontPage.html')
+          a.u-fo(href='./fontPage')
             h1 UFARM
           p
             | Register Urban Farmer to grant them access. 
             a(href='./urbanFarmerRegister')
-              button.sub  register
+              button#sub.btn.btn-outline-success(type='button')  Register 
+          // customer Bookings and orders
           p Customer Bookings and Orders
+          p
+            table#table.table
+              thead
+                tr
+                  th(scope='col') Name
+                  th(scope='col') Image
+                  th(scope='col') ward
+              tbody
+                tr
+                  th(scope='row') 1
+                  td Mark
+                  td Otto
+                  td @mdo
+        // inspect
         .col
           p Inspect the agriculture products of the Urban Farmer
+          p
+            table#table.table
+              thead
+                tr
+                  th(scope='col') Name
+                  th(scope='col') ward
+                  th(scope='col') Price
+                  th(scope='col') Qty
+                  th(scope='col') Mode of Payment
+                  th(scope='col') Direction
+                  th(scope='col') Mode of Delivery
+                  th(scope='col') Produce Type
+                  th(scope='col') Product Category
+                  th(scope='col') Status
+                  th(scope='col') Availability
+                  th(scope='col') Image
+                  th(scope='col') Approve
+              tbody
+              if data.length 
+                each product in data
+                 if product.status == 'Pending'
+                  tr
+                    td #{product.name}
+                    td #{product.ward}
+                    td #{product.price}
+                    td #{product.quantity}
+                    td #{product.mode_of_payment}
+                    td #{product.directions}
+                    td #{product.mode_of_delivery}
+                    td #{product.produce_type}
+                    td #{product.productcategory}
+                    td #{product.status}
+                    td #{product.availability}
+                    td 
+                        img(src=product.image, alt="image" width='20px' height="20px")
+                        //- td #{moment(us
+                    td
+                        a.btn.btn-primary.btn-block(href='/approve/'+product._id) Approve
+                
 link(rel='stylesheet' href='../index.js')
 link(rel='stylesheet' href='../bootstrap/js/bootstrap.js')

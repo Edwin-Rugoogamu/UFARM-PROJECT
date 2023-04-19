@@ -22,7 +22,12 @@ const registerSchema = new mongoose.Schema({
     type:String,
     trim:true
   },
-  password:{
+  activities:{
+    type:[String],
+    trim:true,
+    unique:true,
+  },
+  password: {
     type:String,
     trim:true,
     unique:true,

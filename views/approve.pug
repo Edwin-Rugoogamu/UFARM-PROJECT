@@ -1,0 +1,41 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Urban Farmer
+  link(rel='stylesheet' href='../style.css')
+  link(rel='stylesheet' href='../bootstrap/css/bootstrap.css')
+.urbanf
+  .urbanf2
+    .container
+      .row
+        .col
+          h1 Urban Farmer
+          p Status and Availability of  Products 
+        .col-lg-6
+          fieldset#urbanf3
+            form(action='/approve?id='+product._id onsubmit='' method='POST' )
+              
+              // Produce Type
+              .wardclass
+                label(for='Status') Status
+                br
+                select#ward.users(name='status')
+                  option(value='Pending' selected = product.status == 'Pending' ) Pending
+                  option(value='Approved' selected = product.status == 'Approved' ) Approved
+                br  
+                br
+                label(for='Availability') Availability
+                br
+                //- select#ward.users(name='produce_type')
+                //-   option(value='Available' ) Available
+                //-   option(value='Booked') Booked
+                //-   option(value='N/A') N/A
+                //- br  
+                br    
+              div
+                button(type='submit') Approve
+        .col
+script(src='../index.js')
+script(src='../bootstrap/js/bootstrap.js')

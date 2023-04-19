@@ -1,5 +1,6 @@
 const express=require("express");
 const router=express.Router();
+const connectEnsureLogin = require("connect-ensure-login");
 const Register2 = require("../models/registerModel");
 // const RegisterFO = require("../models/farmerOneRegisterModel")
 // const RegisterUF = require("../models/urbanFarmerRegisterModel")
@@ -59,17 +60,18 @@ router.post("/urbanFarmerRegister" , async(req,res)=>{
         }
     }
     catch(error){
-        res.status(400).send("Sorry Seems there is trouble accessing this page")
+        res.status(400).send("sorry Seems there is trouble accessing this page")
         console.log(error)
     }
 })
 
 // register farmerone
-router.get("/farmerOneRegister",(req,res)=>{
+
+router.get("/farmerOneRegister",connectEnsureLogin.ensureLoggedIn(),(req,res)=>{
     res.render("farmerOneRegister")
 })
 
-router.post("/farmerOneRegister" , async(req,res)=>{
+router.post("/farmerOneRegister" ,connectEnsureLogin.ensureLoggedIn(), async(req,res)=>{
     try{
         const user = new Register2(req.body);
         let userName =  await Register2.findOne({email:req.body.email})
@@ -92,21 +94,26 @@ router.post("/farmerOneRegister" , async(req,res)=>{
     }
 })
 
-// router.get("/homePageAo", async(req,res)=>{
-//     try{
-//         let items = await Register2.find(req.body.role)
-//         if(req.body.role == "farmerone"){
-//         res.render("homepageAo",{farmers:items})}
-//     }
-//     catch(err){
-//         console.log(err)
-//         res.send("failed to retrieve farmer details")
-//     }
-// })
+// edit FO    edit registered farmer ones 
 
+router.get('/edit_FO/:id', async (req, res) => {
+	try {
+		const farmerEdit = await Register2.findOne({_id:req.params.id})
+    res.render('edit_FO', {  data:farmerEdit});
+	} catch (error) {
+		res.status(400).send('Sorry we were unable to update product');
+	}
+});
+
+router.post('/edit_FO', async (req, res) => {
+	try {
+		await Register2.findOneAndUpdate({_id:req.query.id}, req.body);
+    res.redirect('/registeredFarmerOnes');
+	} catch (error) {
+		res.status(400).send('Sorry we were unable to update product');
+	}
+});
 
 
 
 module.exports=router
-// {role:"urbanfarmer",ward:farmerWard}
-// farmerWard

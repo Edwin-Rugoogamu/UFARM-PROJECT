@@ -12,6 +12,7 @@ app.set("view engine","pug")
 app.set("views",path.join(__dirname,"views"))
 
 const User = require("./models/registerModel")
+const Product = require("./models/uploadModel")
 const config = require("./config/database")
 
 const homepage=require("./routes/homepageRouter")
@@ -37,6 +38,8 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
+
+
 mongoose.connect(config.database,{
     useNewUrlParser:true,
     useUnifiedTopology:true
@@ -54,6 +57,8 @@ db.on("error",(err)=>{
 
 
 app.use(express.static("public"))
+app.use( express.static(path.join(__dirname, 'public/images')));
+
 app.use("/",homepage)
 app.use("/",fontpage)
 app.use("/",register)

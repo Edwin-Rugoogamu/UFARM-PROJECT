@@ -18,7 +18,7 @@ head
               // brand name
               #brand-name.col-md-3
                 i.fa-brands.fa-pagelines(style='color: green')
-                a(href='../Main/fontPage.html' style='color: green;text-decoration: none;')  UFARM
+                a(href='fontPage' style='color: green;text-decoration: none;')  UFARM
               // bootstrap nav bar
               .col(style='background-color: none;')
                 nav.navbar.navbar-expand-lg.bg-body-tertiary
@@ -32,13 +32,14 @@ head
                         a.nav-link.active(href='#' style='color: green;') Pricing
                         a.nav-link.active(href='' style='color: green;') Disabled
               // shopping cart and user
-              .col-md-3
-                label
+              #cart.col-md-3
+                div
                   i#shop-cart.fa-solid.fa-cart-shopping
-                  | Cart
-                label
-                  i#shop-cart.fa-solid.fa-user
-                  | Account
+                  label#count 0
+                div
+                  label
+                    i#shop-cart.fa-solid.fa-user
+                    | Account
           // end of container 1
           // begining of conatiner 2
           #homepage-cont.container
@@ -90,53 +91,28 @@ head
           h1 Top categories
           .container
             #catego.row
-              //
-                <div class="col">
-                <span class="cat">
-                <img src="../images/3 oranges.jpg" alt="" style="width: 70px; border-radius: 50px;"><br>
-                Fruits
-                </span>
-                </div>
-                <div class="col"> <span class="cat">
-                <img src="../images/cabbage.jpg" alt="" style="width: 70px; border-radius: 50px;"><br>
-                Vegetable
-                </span></div>
-                <div class="col"> <span class="cat">
-                <img src="../images/eggs.jpg" alt="" style="width: 70px; border-radius: 50px;"><br>
-                Eggs
-                </span></div>
-                <div class="col">
-                <span class="cat">
-                <img src="../images/meats.jpg" alt="" style="width: 70px; border-radius: 50px;"><br>
-                Meats
-                </span>
-                </div>
-                <div class="col">
-                <span class="cat">
-                <img src="../images/drinks.jpg" alt="" style="width: 70px; border-radius: 50px;"><br>
-                Drinks
-                </span>
-                </div>
-              #carouselExampleAutoplaying.carousel.slide(data-bs-ride='carousel')
-                .carousel-inner
-                  .carousel-item.active
-                    img#live.rounded.float-start(src='../images/drinks.jpg' alt='...')
-                    img#live.rounded.float-start(src='../images/cabbage.jpg' alt='...')
-                    img#live.rounded.float-start(src='../images/meats.jpg' alt='...')
-                  .carousel-item
-                    img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
-                    img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
-                    img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
-                  .carousel-item
-                    img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
-                    img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
-                    img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
-                button.carousel-control-prev(type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='prev')
-                  span.carousel-control-prev-icon(aria-hidden='true')
-                  span.visually-hidden Previous
-                button.carousel-control-next(type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='next')
-                  span.carousel-control-next-icon(aria-hidden='true')
-                  span.visually-hidden Next
+               if data.length
+                each product in data
+                  #carouselExampleAutoplaying.carousel.slide(data-bs-ride='carousel')
+                    .carousel-inner
+                      .carousel-item.active
+                        img#live.rounded.float-start(src=product.image alt='...')
+                      //-   img#live.rounded.float-start(src=product.image alt='...')
+                      //-   img#live.rounded.float-start(src=product.image alt='...')
+                      //- //- .carousel-item
+                      //-   img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+                      //-   img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+                      //-   img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+                      //- .carousel-item
+                      //-   img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+                      //-   img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+                      //-   img#live.rounded.float-start(src='../images/eggs.jpg' alt='...')
+                    button.carousel-control-prev(type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='prev')
+                      span.carousel-control-prev-icon(aria-hidden='true')
+                      span.visually-hidden Previous
+                    button.carousel-control-next(type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='next')
+                      span.carousel-control-next-icon(aria-hidden='true')
+                      span.visually-hidden Next
     // end container 5
     #trend.container
       .row
@@ -323,9 +299,14 @@ head
                 .card
                   img.card-img-top(src='../images/eggs.jpg' alt='...')
                   .card-body
-                    label.card-text(for='') green
-                    br
-                    label(for='') UGx3000
+                    div
+                      p.card-text green
+                    .quantity-p
+                      label(for='') UGx3000
+                      .button2
+                        i.fa-solid.fa-minus
+                        .quantity 0
+                        i.fa-solid.fa-plus
                 .card
                   img.card-img-top(src='../images/eggs.jpg' alt='...')
                   .card-body

@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const connectEnsureLogin = require("connect-ensure-login");
 const Register2 = require("../models/registerModel");
 
 
@@ -20,7 +21,9 @@ const Register2 = require("../models/registerModel");
        
 // })
 
-router.get('/registeredFarmerOnes',async(req,res)=>{
+// registered FarmerOnes
+
+router.get('/registeredFarmerOnes', connectEnsureLogin.ensureLoggedIn(), async(req,res)=>{
     try{
        const farmers2= await Register2.find({role:"farmerone"})
        console.log(farmers2)

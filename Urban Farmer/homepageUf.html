@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Farmer</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <div class="urbanf">
+        <div class="urbanf2">
+            <div class="container"> 
+                <div class="row"> 
+                    <div class="col">
+                        <h1>Urban Farmer</h1>
+                    <p>Upload Products </p>
+                    </div>
+                   <div class="col-lg-6"  >
+                    
+                    <fieldset id="urbanf3">
+                        <form action="homepageUf" onsubmit="" method="POST" enctype="multipart/form-data">
+
+                        <!-- Name -->
+                        <div>
+                            <label for="">Name</label><br>
+                            <input type="text" name="name" style="width: 100%;" id="name"><br>
+                             <small id="errorFirst"></small>
+                            </div>
+                            <!-- image -->
+                            <div>
+                                <label for="">Image</label><br>
+                                <input type="file" name="image" style="width: 100%;" id="image"><br>
+                                 <small id="errorFirst"></small>
+                                </div>
+                              <!-- ward Name -->
+                              <div class="wardclass">
+                                <label for="Transportation mode">Ward</label><br>
+                                <select name="Ward" id="ward" class="users">
+                                <option value="ward1">ward1</option>
+                                <option value="ward2">ward2</option>  
+                                <option value="ward3">ward3</option>    
+                                </select>
+                                </div>
+                                <!-- Date -->
+                                <div>
+                                    <label for="">Date</label><br>
+                                    <input type="date" name="date" style="width: 100%;" id="date"><br>
+                                     <small id="errorFirst"></small>
+                                    </div>
+                                    <!-- Price -->
+                                    <div>
+                                        <label for="">Price</label><br>
+                                        <input type="number" name="price" style="width: 100%;" id="price"><br>
+                                         <small id="errorFirst"></small>
+                                        </div> 
+                                          <!-- quantity -->
+                                          <div>
+                                        <label for="">Quantity</label><br>
+                                        <input type="number" name="quantity" style="width: 100%;" id="quantity"><br>
+                                         <small id="errorFirst"></small>
+                                        </div>
+                                        <!-- mode of payment -->
+                                        <div class="wardclass">
+                                         <label for="Payment mode">Mode of Payment</label><br>
+                                        <select name="mode_of_payment" id="payment" class="users">
+                                        <option value="Cash">Cash</option>
+                                        <option value="Mobile Money">Mobile Money</option>    
+                                         </select>
+                                        </div>
+                                        <!-- direction -->
+                                        <div>
+                                        <label for="">Directions</label><br>
+                                        <input type="text" name="directions" style="width: 100%;" id="directions"><br>
+                                        <small id="errorFirst"></small>
+                                        </div>
+                                        <!-- mode of delivery -->
+                                        <div class="wardclass">
+                                        <label for="Transportation mode">Mode of Payment</label><br>
+                                        <select name="mode_of_delivery" id="delivery" class="users">
+                                        <option value="Pick up">Pick up</option>
+                                        <option value="Home delivery">Home delivery</option>    
+                                        </select>
+                                        </div>
+                                        <!-- Produce Type -->
+                                        <div class="wardclass">
+                                        <label for="Transportation mode">Produce Type</label><br>
+                                        <select name="produce_type" id="ward" class="users">
+                                        <option value="organic">organic</option>
+                                        <option value="none organic">none organic</option>  
+                                           
+                                        </select>
+                                        </div>
+                                        <div>
+                                            <button type="submit">UPLOAD</button>
+                                        </div>
+                        </form>
+                    </fieldset>
+                        
+                   </div>
+                   <div class="col"></div>
+                   
+                </div> 
+             </div>
+             
+        </div>
+    </div>
+    <script src="../index.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
