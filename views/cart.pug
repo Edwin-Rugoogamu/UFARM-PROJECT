@@ -1,0 +1,63 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Cart
+  link(rel='stylesheet' href='../public/style.css')
+  link(rel='stylesheet' href='../bootstrap/css/bootstrap.css')
+.cart2
+  .cart3
+    .container
+      .row
+        .col
+        .col(style='text-align: center;')
+          h1 Cart
+          p
+            table#list2.table
+              thead
+                tr
+                  th(scope='col') #
+                  th(scope='col') Product
+                  th(scope='col') Quantity
+                  th(scope='col') Price
+                  th(scope='col') Checkout
+              tbody
+                tr
+                  th(scope='row') 1
+                  td Mark
+                  td Otto
+                  td @mdo
+                  td
+                    button.btn.btn-outline-success(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasWithBothOptions' aria-controls='offcanvasWithBothOptions') Checkout
+                  #offcanvasWithBothOptions.offcanvas.offcanvas-start(data-bs-scroll='true' tabindex='-1' aria-labelledby='offcanvasWithBothOptionsLabel')
+                    .offcanvas-header
+                      h5#offcanvasWithBothOptionsLabel.offcanvas-title Preferrence
+                      button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+                    .offcanvas-body
+                      div
+                        div(style='text-align:left;')
+                          form(action='' post='')
+                            fieldset
+                              div
+                                h1 Product
+                              // book or order
+                              div
+                                label(for='') Book
+                                input(type='radio' name='status' id='' value='booked')
+                                label(for='') Order
+                                input(type='radio' name='status' id='' value='ordered')
+                              // email
+                              div
+                                label(for='') Email
+                                br
+                                input(type='email' name='email' id='' placeholder='@')
+                              h3 OR
+                              // phone number
+                              div
+                                label(for='') Phone Number
+                                br
+                                input(type='text' name='phone_number' id='' placeholder='+256')
+                              button.btn.btn-success(type='button') Submit
+        .col
+script(src='../bootstrap/js/bootstrap.js')

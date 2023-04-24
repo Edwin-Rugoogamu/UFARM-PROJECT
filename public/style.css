@@ -134,7 +134,7 @@
   background-image: url(./images/fresh\ fruit\ pic.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   background-attachment: fixed;
   background-position: center;
 }
@@ -362,7 +362,7 @@ height: 100%;
 
   background: transparent;
   background-image: linear-gradient(to right, rgb(15, 10, 10), transparent);
-  height: 100vh;
+  height: 100%;
 }
 .header1:hover{
   color: white;
@@ -396,7 +396,7 @@ height: 100%;
   background-image: url(./images/fresh\ fruit\ pic.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100dvh;
+  height: 100%;
   background-attachment: fixed;
   background-position: center;
   
@@ -420,10 +420,11 @@ height: 100%;
   margin-bottom: 10px;
 }
 #trend{
-  background-color: white;
+  /* background-color: white; */
   margin-top: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
+  
   
 }
 #categories{
@@ -531,7 +532,7 @@ text-decoration: none;
   background-image: url(./images/fresh\ fruit\ pic.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  height: 100dvh;
   background-attachment: fixed;
   background-position: center;
 }
@@ -567,3 +568,50 @@ text-decoration: none;
 .navbar{
   background-color: rgba(0, 0, 0, 0.315);
 }
+.btn{
+  margin-top: 10px;
+}
+.cart2{
+  background-image: url(./images/fresh\ fruit\ pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+}
+.cart3{
+  position: sticky;
+  background: transparent;
+  background-image: linear-gradient(to right,black,transparent);
+  height: 100vh;
+}
+#list2{
+  color: white;
+}
+.register5{
+  position: sticky;
+  background: transparent;
+  background-image: linear-gradient(to right,black,transparent);
+  height: 100%;
+  color:white
+}
+
+.urbanf4{
+  background-image: url(./images/fresh\ fruit\ pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+}
+.urbanf5{
+  position: sticky;
+  background: transparent;
+  background-image: linear-gradient(to right,black,transparent);
+  height: 100vh;
+}
+/* #tend4{
+  float: left;
+} */

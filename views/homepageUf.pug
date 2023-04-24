@@ -10,12 +10,14 @@ head
   .urbanf2
     .container
       .row
+        a.u-fo(href='./fontPage')
+         h1 UFARM
         .col
           h1 Urban Farmer
           p Upload Products 
         .col-lg-6
           fieldset#urbanf3
-            form(action='homepageUf' onsubmit='' method='POST' enctype='multipart/form-data')
+            form(action='homepageUf' onsubmit='return validate5()' method='POST' enctype='multipart/form-data')
               // Name
               div
                 label(for='') Name
@@ -49,12 +51,12 @@ head
               div
                 label(for='') Price
                 br
-                input#price(type='number' name='price' style='width: 100%;')
+                input#price(type='number' name='price' placeholder='UGx' style='width: 100%;')
                 br
                 small#errorFirst
                 //- product category
               div      
-                select#residence.drop(name='productcategory')
+                select#category.drop(name='productcategory')
                   option(value='') Select Category  
                   option(value='horticultureProduce') Horticulture Produce 
                   option(value='poultry') Poultry 
@@ -92,7 +94,7 @@ head
               .wardclass
                 label(for='Transportation mode') Produce Type
                 br
-                select#ward.users(name='produce_type')
+                select#produce.users(name='produce_type')
                   option(value='organic') organic
                   option(value='none organic') none organic
                 br  
@@ -101,7 +103,7 @@ head
               .wardclass
                 label(for='availability') Availability
                 br
-                select#ward.users(name='availability')
+                select#availability.users(name='availability')
                   option(value='available') available
                   option(value='N/A') N/A
                 br  

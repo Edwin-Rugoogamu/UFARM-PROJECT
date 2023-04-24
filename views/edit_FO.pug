@@ -11,8 +11,8 @@ head
   #famtwo.container-fluid
     .row
       .col-xs-12.col-lg-3.col-md-3
-        a.send(href='./fontPage')
-          h1 UFARM 
+        a.send(href='./registeredFarmerOnes')
+         h1 UFARM 
         p.far2 Register FarmerOne to grant them access.
       // form
       #foRegister.col-xs-12.col-lg-6.col-md-6
@@ -47,7 +47,7 @@ head
             .wardclass
               label(for='') Select user Ward
               br
-              select#users.users(name='user' disabled)
+              select#users.users(name='user' value=data.user disabled)
                 option(value='ward1') Ward 1
                 option(value='ward2') Ward 2
                 option(value='ward3') Ward 3
@@ -85,7 +85,7 @@ head
             div
               label(for='foBirth') Date of Birth
               br
-              input#foBirth(type='date' name='dobirth' style='width: 100%' disabled)
+              input#foBirth(type='date' name='dobirth' style='width: 100%' value=data.dobirth disabled)
               br
               small#error5
             // ninNumber

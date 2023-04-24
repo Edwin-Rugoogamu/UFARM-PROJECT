@@ -20,6 +20,7 @@ const fontpage=require("./routes/fontpageRouter")
 const register=require("./routes/registerRouter")
 const login=require("./routes/loginRouter")
 const registeredFO = require("./routes/aoRoutes")
+const cart = require("./routes/cartRoutes")
 
 
 app.use(bodyParser.json());
@@ -57,13 +58,14 @@ db.on("error",(err)=>{
 
 
 app.use(express.static("public"))
-app.use( express.static(path.join(__dirname, 'public/images')));
+app.use( express.static(path.join(__dirname,'public/images')));
 
 app.use("/",homepage)
 app.use("/",fontpage)
 app.use("/",register)
 app.use("/",login)
 app.use("/",registeredFO)
+app.use("/",cart)
 
 
 app.get("*", (req, res)=>{

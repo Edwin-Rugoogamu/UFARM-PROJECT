@@ -14,6 +14,7 @@
   />
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../build/css/intlTelInput.css">
   
 </head>
 <body>
@@ -108,7 +109,7 @@
                  <!-- phone number -->
                  <div>
                  <label for="">Phone Number</label><br>
-                 <input type="number" name="phonenumber" id="phonenumber" style="width: 100%"><br>
+                 <input type="tel" name="phonenumber" id="phonenumber" style="width: 100%"><br>
                  <small id="error8"></small>
                  </div>
                  <!-- location -->
@@ -126,7 +127,7 @@
                   <!-- period of stay in ward -->
                   <div>
                   <label for="">Period of Stay in Ward</label><br>
-                  <input type="number" id="periodOfStay" name=" periodOfStay" ><br>
+                  <input type="number" id="periodOfStay" name=" periodOfStay" min="10" ><br>
                   <small id="error11"> Above 10 years</small>
                   </div>
                   <button class="sub" type="submit" >SUBMIT</button>
@@ -140,6 +141,7 @@
     </div>
     <script src="../index.js"></script>
     <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../build/js/intlTelInput.js"></script>
 
 </body>
 </html>

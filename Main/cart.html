@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <div class="cart2">
+        <div class="cart3">
+        <div class="container"> 
+            <div class="row"> 
+                <div class="col"></div>
+               <div class="col" style="text-align: center;">
+                <h1>Cart</h1>
+                <p>
+                    <table class="table" id="list2">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Checkout</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+
+                           <td><button class="btn btn-outline-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Checkout</button>
+
+                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                              <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Preferrence</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                              </div>
+                              <div class="offcanvas-body">
+                             <div>
+                                <div style="text-align:left;">
+                                <form action="" post="">
+                                    <fieldset>
+                                      <div>
+                                        <h1>Product</h1>
+                                      </div>
+                                        <!-- book or order -->
+                                        <div>
+                                        <label for="">Book</label>
+                                        <input type="radio" name="status" id="" value="booked">
+                                        <label for="">Order</label>
+                                        <input type="radio" name="status" id="" value="ordered">
+                                    </div>
+                                            <!-- email -->
+                                            <div>
+                                        <label for="">Email</label><br>
+                                        <input type="email" name="email" id="" placeholder="@">
+                                    </div>
+                                    <h3>OR</h3>
+                                    <!-- phone number -->
+                                        <div>
+                                            <label for="">Phone Number</label><br>
+                                            <input type="text" name="phone_number" id="" placeholder="+256">  
+                                        </div>
+                                        <button type="button" class="btn btn-success">Submit</button>
+
+                                    </fieldset>
+                                </form>
+                             </div>
+                            </div>
+                              </div>
+                            </div></td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                </p>
+               </div> 
+                <div class="col"></div>
+            </div> 
+         </div>
+        </div>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    
+</body>
+</html>

@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const connectEnsureLogin = require("connect-ensure-login");
 const Product = require("../models/uploadModel");
+const Cart =require("../models/cartModel")
 const multer = require("multer");
 
 let storage = multer.diskStorage({ 
@@ -12,12 +13,12 @@ let storage = multer.diskStorage({
 let upload = multer({ storage: storage });
 
 
-// shopping products
+// shopping products  HOMEpage
 
 router.get("/homepage", async(req, res) => {
 
   try{
-    const products= await Product.find()
+    const products= await Product.find({status:"Approved"})
     res.render("homepage",{data:products})
 
    }catch{
@@ -25,8 +26,17 @@ router.get("/homepage", async(req, res) => {
    }
   
 });
-router.post("/homepage", (req, res) => {
-  res.render("homePage");
+router.post("/homepage", async(req, res) => {
+  try {
+    const products = new Cart(req.body);
+    // products.image = req.file.originalname;
+    await products.save();
+    res.redirect("/homepage");
+    console.log(req.body);
+  } catch (error) {
+    res.send("image upload failed ${error}");
+  }
+  
 });
 
 // Ao
@@ -102,6 +112,10 @@ router.post('/approve', async (req, res) => {
 		res.status(400).send('Sorry we were unable to update product');
 	}
 });
+
+
+
+
 
 
 module.exports = router;

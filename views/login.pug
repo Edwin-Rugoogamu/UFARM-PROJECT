@@ -16,19 +16,19 @@ head
   #login2.container
     .row
       .col
-        form(action='./login' method='POST' onsubmit='return validate()')
+        form(action='./login' method='POST' onsubmit='return validate2()')
           h1 Login
           // Username
           p
             | Email
             br
-            input(type='text' style='border-style: groove' name='email')
+            input#username1(type='text' style='border-style: groove' name='email')
           small#error1
           // password
           p
             | Password
             br
-            input(type='password' style='border-style: groove;' name='password')
+            input#password1(type='password' style='border-style: groove;' name='password')
           // user
           label(for='') Select user Type
           br
