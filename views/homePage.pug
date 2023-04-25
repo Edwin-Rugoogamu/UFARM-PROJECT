@@ -124,12 +124,10 @@ head
                   h5.card-title #{product.name}
                   p.
                     #{product.price} UGx
-                  form(action='homePage' method="POST")  
-                      //- input(type='hidden' name='image' value=product.image)
-                      input(type='hidden' name='name' value=product.name)
-                      input(type='hidden' name='price' value=product.price)
-                      input(type='text' name='qtn' value=product.quantity)
-                      a.btn.btn-primary(type='submit') Add to Cart
+                  form(action='/homepage' method="POST")  
+                      input(type='hidden' name='qtn' value=product._id)
+                      input.btn.btn-primary(type='submit' value="add to cart")
+                      //- a.btn.btn-primary(type='submit') Add to Cart
   
 script(src='../index.js')
 script(src='../bootstrap/js/bootstrap.js')

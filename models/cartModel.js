@@ -1,40 +1,25 @@
 const mongoose = require('mongoose')
 
-
+const me = mongoose.Schema.Types.ObjectId
     const cartSchema = new mongoose.Schema({
 
-        name:{
-            type:String,
-            trim:true,
-            default:null  
-          },
-          image:{
-            type:String,
-            default:null  
-          },
-          price:{
-            type:String,
-            trim:true,
-            default:null  
-          },
-          qtn:{
-            type:Number,
-            trim:true ,
-            default:null 
-          },
         
-            // user: {
-            //   type: mongoose.Schema.Types.ObjectId,
-            //   ref: 'User'
-            // },
-            // items: [{
-            //   product: {
-            //     type: mongoose.Schema.Types.ObjectId,
-            //     ref: 'Product'
-            //   },
-            //   quantity: Number
-            // }]
+            user: {
+              type: me,
+              ref: 'Register2'
+            },
+            items: [{
+              product: {
+                type: String,
+                ref: 'Products'
+              },
+              quantity: {
+                type:Number,
+                default:1
+              }
+            }]
           });
+
           
     
 

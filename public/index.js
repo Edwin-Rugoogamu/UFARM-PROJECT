@@ -120,6 +120,7 @@ const validate3 = ()=>{
  const regDate = document.getElementById("regDate");
  const foBirth = document.getElementById("foBirth");
  const ninNumber = document.getElementById("ninNumber");
+ const error7 = document.getElementById("error7");
  const phonenumber = document.getElementById("phonenumber");
  const residence = document.getElementById("residence");
  const residenceType = document.getElementById("residenceType");
@@ -187,10 +188,14 @@ else{
 if(ninNumber.value==""){
  ninNumber.style.border="solid red"
  return false
-}
-else{
+}else if(ninNumber.value.lendth < 13 ){
+  error7.text=="should be 13 alphameric characters"
+  // error7.style.border="solid red"
+}else{
  ninNumber.style.border="groove green"
+ error7.style.border="groove green"
 }
+
 if(phonenumber.value==""){
  phonenumber.style.border="solid red"
  return false

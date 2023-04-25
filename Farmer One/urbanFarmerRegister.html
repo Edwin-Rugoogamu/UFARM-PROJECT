@@ -27,18 +27,19 @@
                 <!-- second name -->
                 <div>
                 <label for="">Second Name</label><br>
-                <input type="text" style="width: 100%" name=" secondName"><br>
+                <input type="text" style="width: 100%" name=" secondName" id="secondName"><br>
                 </div>
                  
                   <!-- unique FO number -->
                   <div>
                     <input type="password" placeholder="password" id="foNumber" style="width: 100%" name="password"><br>
-                    <small id="error4"></small>
+                    <small id="error2"></small>
                     </div>
                     <!-- email -->
                  <div>
                     <label for="email">Email</label>
-                    <input type="text" name="email" style="width: 100%" id="email">
+                    <input type="email" name="email" style="width: 100%" id="email">
+                    <small id="error10">de</small>
                  </div>
                 <!-- gender -->
                 <div>
@@ -55,7 +56,7 @@
                  <!-- date of birth -->
                  <div>
                  <label for="">Date of Birth</label><br>
-                 <input type="date" style="width: 100%" name=" dobirth" id="dob"><br>
+                 <input type="date" style="width: 100%" name=" dobirth" id="dob" max="2013"><br>
                  </div>
                  <!-- role -->
                  <div>
@@ -67,13 +68,15 @@
                  <div>
                     <!-- personal number -->
                  <label for="">Personal No.</label><br>
-                 <input type="number" name="phonenumber" id="phonenumber" style="width: 100%" ><br>
+                 <input type="number" name="phonenumber" id="phonenumber" style="width: 100%" placeholder="+256" ><br>
                  <label for="">Other No.</label><br>
-                 <input type="number" name="othernumber" id="othernumber" style="width: 100%"><br>
+                 <input type="number" name="othernumber" id="othernumber" style="width: 100%" placeholder="+256"><br>
                  </div>
                  <!-- nin -->
                  <div>
                  <input type="text" placeholder="NIN number" name="ninNumber" id="ninNumber"><br>
+                 <small id="error4"></small>
+                 <br>
                  </div>
                 <!-- ward -->
                  <div class="wardclass">
