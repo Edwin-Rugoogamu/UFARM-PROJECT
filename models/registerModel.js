@@ -25,7 +25,7 @@ const registerSchema = new mongoose.Schema({
   activities:{
     type:[String],
     trim:true,
-    unique:true,
+    // unique:true,
   },
   password: {
     type:String,

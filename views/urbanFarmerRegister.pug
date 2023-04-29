@@ -14,7 +14,7 @@ head
           h1 UFARM 
         p.far2 Register Urban Farmer to grant them access.
       #uFarmer2.col-xs-12.col-lg-6.col-md-6
-        form(action='./urbanFarmerRegister' onsubmit='return validate4()' method='POST')
+        form(action='/urbanFarmerRegister' onsubmit='return validate4()' method='POST')
           h3 REGISTRATION FORM 
           // firstName
           div
@@ -36,7 +36,7 @@ head
           // email
           div
             label(for='email') Email
-            input#email(type='email' name='email' style='width: 100%')
+            input#email3(type='email' name='email' style='width: 100%')
           // gender
           div
             label(for='') Male
@@ -54,7 +54,7 @@ head
           div
             label(for='') Date of Birth
             br
-            input#dob(type='date' style='width: 100%' name=' dobirth')
+            input#dob(type='date' style='width: 100%' name=' dobirth' max="2019-01-01")
             br
           // role
           div
@@ -67,16 +67,17 @@ head
             h5 Activity
             label(for='male') Upload Products
             input(type='checkbox' name='activities' value='Upload Products')
+            //-  input(type='checkbox' name='activities' value='Upload Products')
             br
           // personal number  
           div
             label(for='') Personal No.
             br
-            input#phonenumber(type='number' name='phonenumber' style='width: 100%')
+            input#phonenumber(type='number' name='phonenumber' placeholder="xxx-xxx-xxxx" style='width: 100%')
             br
             label(for='') Other No.
             br
-            input#othernumber(type='number' name='othernumber' style='width: 100%')
+            input#othernumber(type='number' name='othernumber' placeholder="xxx-xxx-xxxx" style='width: 100%')
             br
           // nin
           div

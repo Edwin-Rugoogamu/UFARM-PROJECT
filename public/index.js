@@ -19,6 +19,10 @@ const validate = ()=>{
      sure.style.border="solid red";
      return false 
   }
+  else if(sure.value.length < 5){
+    sure.style.border="solid red"
+    return false
+ }
    else{
      sure.style.border=" green";
    } 
@@ -27,13 +31,26 @@ const validate = ()=>{
      secondName.style.border=" solid red";
      return false  
   }
+  else if(secondName.value.length < 5){
+    secondName.style.border="solid red"
+    return false
+ }
    else{
      secondName.style.border=" solid green";
    }
+  //  const emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+
   if(email.value ==""){
      email.style.border="solid red";
      return false  
   }
+  // else if(!email.value.match(emailFormat)){
+  //   email.style.border="solid red"
+  //   error3.textContent ="you have entered an invalid email address"
+  //   error3.style.color="red"
+  //   return false
+  // }
    else{
      email.style.border="solid green";
    }
@@ -114,6 +131,7 @@ const validate3 = ()=>{
  const firstname = document.getElementById("firstname");
  const secondname = document.getElementById("secondname");
  const email = document.getElementById("email");
+ const error3 = document.getElementById("error3");
  const role = document.getElementById("role");
  const ward = document.getElementById("ward");
  const foNumber = document.getElementById("foNumber");
@@ -128,7 +146,13 @@ const validate3 = ()=>{
 
 
 
+
+
  if(firstname.value==""){
+   firstname.style.border="solid red"
+   return false
+}
+ else if(firstname.value.length < 5){
    firstname.style.border="solid red"
    return false
 }
@@ -136,20 +160,46 @@ else{
  firstname.style.border="groove green"
 }
 
+
+
 if(secondname.value==""){
  secondname.style.border="solid red"
  return false
 }
+ else if(secondname.value.length < 5){
+   secondname.style.border="solid red"
+   return false
+}
 else{
  secondname.style.border="groove green"
 }
-if(email.value==""){
- email.style.border="solid red"
- return false
+
+// email
+
+const emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+ if(email.value==""){
+  email.style.border="solid red"
+  error3.textContent ="you have entered an invalid email address"
+  error3.style.color="red"
+  return false
+}
+
+else if(!email.value.match(emailFormat)){
+  email.style.border="solid red"
+  error3.textContent ="you have entered an invalid email address"
+  error3.style.color="red"
+  return false
 }
 else{
  email.style.border="groove green"
+ error3.textContent ="you have entered a valid email address"
+ error3.style.color="green"
+
 }
+
+// role
+
 if(role.value==""){
  role.style.border="solid red"
  return false
@@ -164,13 +214,21 @@ if(ward.value==""){
 else{
 ward.style.border="groove green"
 }
-if(foNumber.value==""){
+
+// password or Fo Number
+
+const passregex=  /^[A-Za-z]\w{7,14}$/;
+
+
+if(foNumber.value=="" || !foNumber.value.match(passregex)){
  foNumber.style.border="solid red"
- return false
+return false
 }
 else{
  foNumber.style.border="groove green"
 }
+
+// registration page
 if(regDate.value==""){
  regDate.style.border="solid red"
  return false
@@ -188,18 +246,27 @@ else{
 if(ninNumber.value==""){
  ninNumber.style.border="solid red"
  return false
-}else if(ninNumber.value.lendth < 13 ){
-  error7.text=="should be 13 alphameric characters"
-  // error7.style.border="solid red"
+}else if(ninNumber.value.length < 13 ){
+  ninNumber.style.border="solid red"
+  error7.textContent ="should be 13 alphameric characters"
+  error7.style.color="red"
+  return false
 }else{
  ninNumber.style.border="groove green"
- error7.style.border="groove green"
+//  error7.style.color="groove green"
 }
 
+
+var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 if(phonenumber.value==""){
  phonenumber.style.border="solid red"
  return false
 }
+else if(!phonenumber.value.match(phoneno))
+     {
+    phonenumber.style.border="solid red"
+	   return false;
+	 }
 else{
  phonenumber.style.border="groove green"
 }
@@ -233,13 +300,15 @@ const validate4 = ()=>{
 const firstname = document.getElementById("firstname");
 const secondName = document.getElementById("secondName");
 const foNumber = document.getElementById("foNumber");
-const email = document.getElementById("email");
+const email3 = document.getElementById("email3");
 const date = document.getElementById("date");
 const dob = document.getElementById("dob");
 const role = document.getElementById("role");
 const phonenumber = document.getElementById("phonenumber");
 const othernumber = document.getElementById("othernumber");
 const ninNumber = document.getElementById("ninNumber");
+const error4 = document.getElementById("error4");
+const error10 = document.getElementById("error10");
 const users = document.getElementById("users");
 
 
@@ -247,6 +316,10 @@ const users = document.getElementById("users");
 if(firstname.value==""){
  firstname.style.border="solid red"
  return false
+}
+else if(firstname.value.length < 5){
+  firstname.style.border="solid red"
+  return false
 }
 else{
 firstname.style.border="groove green"
@@ -256,25 +329,55 @@ if(secondName.value==""){
  secondName.style.border="solid red"
  return false
 }
+else if(secondName.value.length < 5){
+  secondName.style.border="solid red"
+  return false
+}
 else{
  secondName.style.border="groove green"
 }
 
-if(foNumber.value==""){
- foNumber.style.border="solid red"
+
+const passregex=  /^[A-Za-z]\w{7,14}$/;
+
+if(foNumber.value=="" || !foNumber.value.match(passregex)){
+  foNumber.style.border="solid red"
  return false
-}
+ }
 else{
  foNumber.style.border="groove green"
+ error2.textContent = " great";
+ error2.style = "color: green; font-size:11px; font-family:Arial, Helvetica, sans-serif;";
 }
 
-if(email.value==""){
- email.style.border="solid red"
- return false
-}
-else{
- email.style.border="groove green"
-}
+
+// email3 10
+
+if(email3.value==""){
+  email3.style.border="solid red"
+  error10.textContent ="you have entered an invalid email3 address"
+  error10.style.color="red"
+  return false
+}else{
+  email3.style.border="groove green"
+  error10.textContent ="you have entered a valid email3 address"
+  error10.style.color="green"
+ 
+ }
+
+// const email3Format = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+
+
+// else if(!email3.value.match(email3Format)){
+//   email3.style.border="solid red"
+//   error10.textContent ="you have entered an invalid email3 address"
+//   error10.style.color="red"
+//   return false
+// }
+
+
+// date
 
 if(date.value==""){
  date.style.border="solid red"
@@ -300,10 +403,12 @@ else{
 role.style.border="groove green"
 }
 
-if(phonenumber.value==""){
+var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+if(phonenumber.value=="" || !phonenumber.value.match(phoneno)){
  phonenumber.style.border="solid red"
  return false
 }
+
 else{
 phonenumber.style.border="groove green"
 }
@@ -319,6 +424,11 @@ othernumber.style.border="groove green"
 if(ninNumber.value==""){
  ninNumber.style.border="solid red"
  return false
+}else if(ninNumber.value.length < 13 ){
+  ninNumber.style.border="solid red"
+  error4.textContent ="should be 13 alphameric characters"
+  error4.style.color="red"
+  return false
 }
 else{
 ninNumber.style.border="groove green"
@@ -331,6 +441,8 @@ if( users.value==""){
 else{
 users.style.border="groove green"
 }
+
+
 
 
 }

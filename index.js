@@ -126,7 +126,7 @@ const validate3 = ()=>{
  const residence = document.getElementById("residence");
  const residenceType = document.getElementById("residenceType");
  const periodOfStay = document.getElementById("periodOfStay");
- const emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
 
 
 
@@ -152,12 +152,14 @@ else{
 //  error3.style.color="red"
 //  return false
 // }
+const emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
  if(email.value==""){
   email.style.border="groove red"
-  error10.textContent ="you have entered an invalid email address"
-  error10.style.color="red"
+  error3.textContent ="you have entered an invalid email address"
+  error3.style.color="red"
   return false
 }
+
 else if(!email.value.match(emailFormat)){
   email.style.border="groove red"
   error3.textContent ="you have entered an invalid email address"
@@ -221,10 +223,17 @@ if(ninNumber.value==""){
 //  error7.style.color="groove green"
 }
 
+
+var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 if(phonenumber.value==""){
  phonenumber.style.border="solid red"
  return false
 }
+else if(!phonenumber.value.match(phoneno))
+     {
+    phonenumber.style.border="solid red"
+	   return false;
+	 }
 else{
  phonenumber.style.border="groove green"
 }
@@ -349,10 +358,16 @@ else{
 role.style.border="groove green"
 }
 
+var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 if(phonenumber.value==""){
  phonenumber.style.border="solid red"
  return false
 }
+else if(!phonenumber.value.match(phoneno))
+     {
+    phonenumber.style.border="solid red"
+	   return false;
+	 }
 else{
 phonenumber.style.border="groove green"
 }

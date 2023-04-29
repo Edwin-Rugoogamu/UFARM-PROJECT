@@ -18,7 +18,7 @@ head
       #foRegister.col-xs-12.col-lg-6.col-md-6
         h3 Registration Form
         fieldset
-          form(action='./farmerOneRegister' onsubmit='return validate3()' method='POST')
+          form(action='/farmerOneRegister' onsubmit='return validate3()' method='POST')
             // firstName
             div
               label(for='') firstName
@@ -36,7 +36,8 @@ head
             // email
             div
               label(for='email') Email
-              input#email(type='email' name='email' style='width: 100%')
+              input#email(type='email' name='email' style='width: 100%' )
+              small#error3
             // role
             div
               label#role(for='role') Role
@@ -85,7 +86,7 @@ head
             div
               label(for='foBirth') Date of Birth
               br
-              input#foBirth(type='date' name=' dobirth' max="2013" style='width: 100%')
+              input#foBirth(type='date' name=' dobirth' max="2019-01-01" style='width: 100%')
               br
               small#error5
             // ninNumber
@@ -97,7 +98,7 @@ head
             div
               label(for='') Phone Number
               br
-              input#phonenumber(type='number' name='phonenumber' style='width: 100%')
+              input#phonenumber(type='number' name='phonenumber' placeholder="xxx-xxx-xxxx" style='width: 100%')
               br
               small#error8
             // location

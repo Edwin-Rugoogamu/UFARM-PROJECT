@@ -90,7 +90,7 @@ head
               small#error5
             // ninNumber
             div
-              input(type='text' placeholder='NIN number' style='width: 100%' name='ninNumber' disabled)
+              input(type='text' placeholder='NIN number' style='width: 100%' name='ninNumber' value=data.ninNumber disabled)
               br
               small#error7
             // phone number
@@ -104,21 +104,21 @@ head
             div
               label(for='residence') Place of Residence
               br
-              input#residence.residence(type='text' name='placeOfResidence' style='width: 100%' disabled)
+              input#residence.residence(type='text' name='placeOfResidence' style='width: 100%' value=data.placeOfResidence disabled)
               br
               small#error9
             // resdence type
             div
               label(for='residenceType') Residence Type
               br
-              input#residenceType.residencetype(type='text' name='residenceType' style='width: 100%' disabled)
+              input#residenceType.residencetype(type='text' name='residenceType' style='width: 100%' value=data.residenceType disabled)
               br
               small#error10
             // period of stay in ward
             div
               label(for='') Period of Stay in Ward
               br
-              input(type='number' id='' name='periodOfStay' disabled)
+              input(type='number' id='' name='periodOfStay' value=data.periodOfStay disabled)
               br
               small#error11  Above 10 years
             button.sub SUBMIT
