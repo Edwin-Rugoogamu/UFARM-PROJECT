@@ -424,7 +424,7 @@ height: 100%;
   margin-top: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
-  
+  float: left;
   
 }
 #categories{
@@ -612,9 +612,9 @@ text-decoration: none;
   background-image: linear-gradient(to right,black,transparent);
   height: 100vh;
 }
-/* #tend4{
+#tend4{
   float: left;
-} */
+}
 
 .ufarmer8{
   background-image: url(./images/fresh\ fruit\ pic.jpg);
@@ -626,6 +626,21 @@ text-decoration: none;
   color: white;
 }
 .ufarmer7{
+  position: sticky;
+  background: transparent;
+  background-image: linear-gradient(to right,black,transparent);
+  height: 100vh;
+}
+.cart2{
+  background-image: url(./images/fresh\ fruit\ pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+}
+.cart3{
   position: sticky;
   background: transparent;
   background-image: linear-gradient(to right,black,transparent);

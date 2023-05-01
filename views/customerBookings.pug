@@ -15,7 +15,7 @@ head
           a.u-fo(href='./fontPage')
             h1 UFARM
           // customer Bookings and orders
-          p Customer Bookings and Orders
+          p Customer  Orders
           p
             table#table.table
               thead
@@ -29,12 +29,36 @@ head
               tbody
               if data.length 
                 each product in data
-                 tr
-                    td #{product.name}
-                    td #{product.quantity}
-                    td #{product.price}
-                    td #{product.status}
-                    td #{product.email}
-                    td #{product.phonenumber}
+                    if product.status=="ordered"
+                        tr
+                            td #{product.name}
+                            td #{product.quantity}
+                            td #{product.price}
+                            td #{product.status}
+                            td #{product.email}
+                            td #{product.phonenumber}
+          // customer Bookings and orders
+          p Customer Bookings
+          p
+            table#table.table
+              thead
+                tr
+                  th(scope='col') Name
+                  th(scope='col') Quantity
+                  th(scope='col') Price
+                  th(scope='col') Status
+                  th(scope='col') Email
+                  th(scope='col') Phone Number
+              tbody
+              if data.length 
+                each product in data
+                    if product.status=="booked"
+                        tr
+                            td #{product.name}
+                            td #{product.quantity}
+                            td #{product.price}
+                            td #{product.status}
+                            td #{product.email}
+                            td #{product.phonenumber}                 
 link(rel='stylesheet' href='../index.js')
 link(rel='stylesheet' href='../bootstrap/js/bootstrap.js')
