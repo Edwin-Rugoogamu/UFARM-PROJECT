@@ -3,22 +3,39 @@ const mongoose = require('mongoose')
 const me = mongoose.Schema.Types.ObjectId
     const cartSchema = new mongoose.Schema({
 
-        
-            user: {
-              type: me,
-              ref: 'Register2'
-            },
-            items: [{
-              product: {
-                type: String,
-                ref: 'Products'
-              },
-              quantity: {
-                type:Number,
-                default:1
-              }
-            }]
-          });
+      name:{
+        type:String,
+        trim:true,
+        default:null  
+      },
+      price:{
+        type:String,
+        trim:true,
+        default:null  
+      },
+      image:{
+        type:String,
+        default:null 
+      },
+      quantity:{
+        type:Number,
+        default:null 
+      },
+      status: {
+        type: String,
+        default: 'Book',
+        enum: ['Book', 'Order']
+    },
+    email:{
+      type:String,
+      default:null 
+    },
+    phonenumber:{
+      type:Number,
+      default:null 
+    },
+   
+    })
 
           
     

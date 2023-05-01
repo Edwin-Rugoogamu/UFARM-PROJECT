@@ -26,54 +26,54 @@ router.get("/homepage",connectEnsureLogin.ensureLoggedIn(), async(req, res) => {
    }
   
 });
-router.post("/homepage",connectEnsureLogin.ensureLoggedIn(), async(req, res) => {
-  try {
-    const userid = req.user._id
-    const products = new Cart(req.body);
-    const productid= req.body
-    // const cartproduct = await Product.findOne({_id:productid})
-    // console.log(cartproduct)
-    const userproduct = await Cart.findOne({_id:userid})
-     const qty = 1;
-    // if(!cartproduct){
-    //   res.send("there is no product")
-    // }
-    if(userproduct){
-       const productIndex = userproduct.items.findIndex(pdt => pdt.product == productid)
+router.post("/homepage",upload.single("image"), async(req, res) => {
+  
+    try {
+      const products = new Cart(req.body);
+      // products.image = req.file.originalname;
+      await products.save();
+      res.redirect("/homepage");
+      console.log(req.body);
+      console.log("xxxxxxxxx")
+    } catch (error) {
+      res.send("image upload failed ${error}");
+    }
+  //   if(userproduct){
+  //      const productIndex = userproduct.items.findIndex(pdt => pdt.product == productid)
          
-       if(productIndex > -1){
-        const existproduct = userproduct.items[productIndex]
+  //      if(productIndex > -1){
+  //       const existproduct = userproduct.items[productIndex]
 
-        existproduct.quantity +=1
-        userproduct.items[productIndex]= existproduct
-        await Cart.save()
+  //       existproduct.quantity +=1
+  //       userproduct.items[productIndex]= existproduct
+  //       await Cart.save()
 
         
 
-       }
-       else{
-        userproduct.items.push({productid ,qty})
-       userproduct.user
-        await userproduct.save()
-         res.redirect("/homepage");
-       }
+  //      }
+  //      else{
+  //       userproduct.items.push({productid ,qty})
+  //      userproduct.user
+  //       await userproduct.save()
+  //        res.redirect("/homepage");
+  //      }
 
-    }else{
-      await Cart.create(
-        {user:userid,items:[{product:productid}]}
-      )
-      res.redirect("/homepage"); 
-    }
-    // products.image = req.file.originalname;
-    // await products.save();
-    // res.redirect("/homepage");
-    // console.log(req.user);
-    // console.log(req.body);
+  //   }else{
+  //     await Cart.create(
+  //       {user:userid,items:[{product:productid}]}
+  //     )
+  //     res.redirect("/homepage"); 
+  //   }
+  //   // products.image = req.file.originalname;
+  //   // await products.save();
+  //   // res.redirect("/homepage");
+  //   // console.log(req.user);
+  //   // console.log(req.body);
     
     
-  } catch (error) {
-    res.send("image upload failed ${error}" + error);
-  }
+  // } catch (error) {
+  //   res.send("image upload failed ${error}" + error);
+  // }
   
 });
 
@@ -149,6 +149,23 @@ router.post('/approve', async (req, res) => {
 	} catch (error) {
 		res.status(400).send('Sorry we were unable to update product');
 	}
+});
+
+
+
+router.get( "/customerBookings", async (req, res) => {
+  try{
+   const checks= await Cart.find()
+   res.render("customerBookings",{data:checks})
+
+  }catch{
+   res.render("customerBookings");
+  }
+ 
+
+});
+router.post("/customerBookings", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
+ res.render("customerBookings");
 });
 
 

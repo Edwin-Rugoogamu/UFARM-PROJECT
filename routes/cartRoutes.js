@@ -14,22 +14,56 @@ let upload = multer({ storage: storage });
 
 // Cart
 
-router.get("/cart", connectEnsureLogin.ensureLoggedIn(),(req, res) => {
-  res.render("cart");
+router.get("/cart", connectEnsureLogin.ensureLoggedIn(), async(req, res) => {
+  try{
+    const cart = await Cart.find()
+    res.render("cart",{carts:cart})
+
+   }catch{
+    res.render("cart");
+   }
+});
+router.post('/cart', async (req, res) => {
+	
 });
 
-router.post("/cart", upload.single("image"), async (req, res) => {
-  try {
-    const products = new Cart(req.body);
-    products.image = req.file.originalname;
-    await products.save();
-    res.redirect("/cart");
-    console.log(req.body);
-  } catch (error) {
-    res.send("image upload failed ${error}");
-  }
-  // res.render("aoDash")
+// checkout
+
+router.get('/checkout/:id', async (req, res) => {
+	try {
+		const checkout = await Cart.findOne({_id:req.params.id})
+    res.render('checkout', {  data:checkout});
+	} catch (error) {
+		res.status(400).send('Sorry we were unable to update product');
+	}
 });
+
+router.post('/checkout', async (req, res) => {
+	try {
+		await Cart.findOneAndUpdate({_id:req.query.id}, req.body);
+    res.redirect('/cart');
+	} catch (error) {
+		res.status(400).send('Sorry we were unable to update product');
+	}
+});
+
+
+
+
+
+// router.post("/homepage", upload.single("image"), async (req, res) => {
+//   try {
+//     const products = new Cart(req.body);
+//     products.image = req.file.originalname;
+//     await products.save();
+//     res.redirect("/cart");
+//     console.log(req.body);
+//     console.log("xxxxxxxxx")
+//   } catch (error) {
+//     res.send("image upload failed ${error}");
+//   }
+//   // res.render("aoDash")
+// });
 
 
 

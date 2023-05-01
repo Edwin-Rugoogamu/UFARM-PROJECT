@@ -1,0 +1,40 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css' integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  link(rel='stylesheet' href='../style.css')
+  link(rel='stylesheet' href='../bootstrap/css/bootstrap.css')
+.ufarmer8
+  .ufarmer7
+    .container
+      .row
+        .col
+          a.u-fo(href='./fontPage')
+            h1 UFARM
+          // customer Bookings and orders
+          p Customer Bookings and Orders
+          p
+            table#table.table
+              thead
+                tr
+                  th(scope='col') Name
+                  th(scope='col') Quantity
+                  th(scope='col') Price
+                  th(scope='col') Status
+                  th(scope='col') Email
+                  th(scope='col') Phone Number
+              tbody
+              if data.length 
+                each product in data
+                 tr
+                    td #{product.name}
+                    td #{product.quantity}
+                    td #{product.price}
+                    td #{product.status}
+                    td #{product.email}
+                    td #{product.phonenumber}
+link(rel='stylesheet' href='../index.js')
+link(rel='stylesheet' href='../bootstrap/js/bootstrap.js')
