@@ -82,47 +82,47 @@ router.post("/cart", upload.single("image"), async (req, res) => {
 
 
 
-router.get('/cart', async (req, res) => {
-  try {
-    // Get the user's cart
-    const cart = await Cart.findOne({ user: req.user._id })
-      .populate('items.product');
+// router.get('/cart', async (req, res) => {
+//   try {
+//     // Get the user's cart
+//     const cart = await Cart.findOne({ user: req.user._id })
+//       .populate('items.product');
 
-    res.render("cart",{products:cart})
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: 'Server Error' });
-  }
-});
-
-
+//     res.render("cart",{products:cart})
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ message: 'Server Error' });
+//   }
+// });
 
 
 
-router.post('/cart/add', async (req, res) => {
-  try {
-    // Get the user's cart
-    const cart = await Cart.findOne({ user: req.user._id });
 
-    // Check if the product is already in the cart
-    const itemIndex = cart.items.findIndex(p => p.product == req.body.productId);
-    if (itemIndex > -1) {
-      // If so, increment the quantity
-      cart.items[itemIndex].quantity += req.body.quantity;
-    } else {
-      // Otherwise, add the new product
-      cart.items.push({ product: req.body.productId, quantity: req.body.quantity });
-    }
 
-    // Save the updated cart
-    const updatedCart = await cart.save();
+// router.post('/cart/add', async (req, res) => {
+//   try {
+//     // Get the user's cart
+//     const cart = await Cart.findOne({ user: req.user._id });
 
-    // res.status(200).json(updatedCart);
-  } catch (err) {
-    console.error(err);
-    // res.status(500).json({ message: 'Server Error' });
-  }
-});
+//     // Check if the product is already in the cart
+//     const itemIndex = cart.items.findIndex(p => p.product == req.body.productId);
+//     if (itemIndex > -1) {
+//       // If so, increment the quantity
+//       cart.items[itemIndex].quantity += req.body.quantity;
+//     } else {
+//       // Otherwise, add the new product
+//       cart.items.push({ product: req.body.productId, quantity: req.body.quantity });
+//     }
+
+//     // Save the updated cart
+//     const updatedCart = await cart.save();
+
+//     // res.status(200).json(updatedCart);
+//   } catch (err) {
+//     console.error(err);
+//     // res.status(500).json({ message: 'Server Error' });
+//   }
+// });
 
 
 
