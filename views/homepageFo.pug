@@ -18,21 +18,10 @@ head
             | Register Urban Farmer to grant them access. 
             a(href='./urbanFarmerRegister')
               button#sub.btn.btn-outline-success(type='button')  Register 
-          // customer Bookings and orders
-          p Customer Bookings and Orders
           p
-            table#table.table
-              thead
-                tr
-                  th(scope='col') Name
-                  th(scope='col') Image
-                  th(scope='col') ward
-              tbody
-                tr
-                  th(scope='row') 1
-                  td Mark
-                  td Otto
-                  td @mdo
+            | customer bookings and orders. 
+            a(href='./customerBookings')
+              button#sub.btn.btn-outline-success(type='button')  Orders     
         // inspect
         .col
           p Inspect the agriculture products of the Urban Farmer
@@ -56,24 +45,24 @@ head
               tbody
               if data.length 
                 each product in data
-                 if product.status == 'Pending'
-                  tr
-                    td #{product.name}
-                    td #{product.ward}
-                    td #{product.price}
-                    td #{product.quantity}
-                    td #{product.mode_of_payment}
-                    td #{product.directions}
-                    td #{product.mode_of_delivery}
-                    td #{product.produce_type}
-                    td #{product.productcategory}
-                    td #{product.status}
-                    td #{product.availability}
-                    td 
-                        img(src=product.image, alt="image" width='20px' height="20px")
-                        //- td #{moment(us
-                    td
-                        a.btn.btn-primary.btn-block(href='/approve/'+product._id) Approve
+                  if product.status == 'Pending'
+                    tr
+                      td #{product.name}
+                      td #{product.ward}
+                      td #{product.price}
+                      td #{product.quantity}
+                      td #{product.mode_of_payment}
+                      td #{product.directions}
+                      td #{product.mode_of_delivery}
+                      td #{product.produce_type}
+                      td #{product.productcategory}
+                      td #{product.status}
+                      td #{product.availability}
+                      td 
+                          img(src=product.image, alt="image" width='20px' height="20px")
+                          //- td #{moment(us
+                      td
+                          a.btn.btn-primary.btn-block(href='/approve/'+product._id) Approve
                 
 link(rel='stylesheet' href='../index.js')
 link(rel='stylesheet' href='../bootstrap/js/bootstrap.js')
