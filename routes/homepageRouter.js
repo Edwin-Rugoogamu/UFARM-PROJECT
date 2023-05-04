@@ -30,11 +30,17 @@ router.post("/homepage",upload.single("image"), async(req, res) => {
   
     try {
       const products = new Cart(req.body);
+      let userName =  await Cart.findOne({name:req.body.name})
       // products.image = req.file.originalname;
+      if(userName){
+      
+      }
+      else{
       await products.save();
       res.redirect("/homepage");
       console.log(req.body);
       console.log("xxxxxxxxx")
+      }
     } catch (error) {
       res.send("image upload failed ${error}");
     }

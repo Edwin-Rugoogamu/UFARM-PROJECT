@@ -3,6 +3,7 @@ const validate = ()=>{
     
     
   const sure = document.getElementById("sure");
+  const user = document.getElementById("user");
   const secondName = document.getElementById("secondName");
   const email = document.getElementById("email");
   const password = document.getElementById("password");
@@ -19,41 +20,54 @@ const validate = ()=>{
      sure.style.border="solid red";
      return false 
   }
-  else if(sure.value.length < 5){
+  else if(sure.value.length < 5 || sure.value.length > 50){
     sure.style.border="solid red"
     return false
  }
    else{
-     sure.style.border=" green";
+     sure.style.border=" solid green";
    } 
 
   if(secondName.value ==""){
      secondName.style.border=" solid red";
      return false  
   }
-  else if(secondName.value.length < 5){
+  else if(secondName.value.length < 5 || secondName.value.length > 50){
     secondName.style.border="solid red"
     return false
  }
    else{
      secondName.style.border=" solid green";
    }
-  //  const emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+  var regEx = /^[0-9a-zA-Z]+$/;
+   if(user.value.match(regEx) && user.value.length > 5)
+     {
+      user.style.border="solid green"
+      
+     }
+   else
+     {
+     alert("Please enter letters and numbers only above 5 in length.");
+     user.style.border="solid red"
+     return false;
+     }
 
 
-  if(email.value ==""){
-     email.style.border="solid red";
-     return false  
-  }
-  // else if(!email.value.match(emailFormat)){
-  //   email.style.border="solid red"
-  //   error3.textContent ="you have entered an invalid email address"
-  //   error3.style.color="red"
-  //   return false
-  // }
-   else{
-     email.style.border="solid green";
-   }
+     
+    const emailFormat =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+   if(email.value.match(emailFormat))
+     {
+      email.style.border="solid green"
+      
+     }
+   else
+     {
+     email.style.border="solid red"
+     return false;
+     }
+  
 
   if(password.value ==""){
      password.style.border=" solid red";
@@ -178,19 +192,19 @@ else{
 
 const emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
- if(email.value==""){
+ if(email.value=="" && !email.value.match(emailFormat)){
   email.style.border="solid red"
   error3.textContent ="you have entered an invalid email address"
   error3.style.color="red"
   return false
 }
 
-else if(!email.value.match(emailFormat)){
-  email.style.border="solid red"
-  error3.textContent ="you have entered an invalid email address"
-  error3.style.color="red"
-  return false
-}
+// else if(!email.value.match(emailFormat)){
+//   email.style.border="solid red"
+//   error3.textContent ="you have entered an invalid email address"
+//   error3.style.color="red"
+//   return false
+// }
 else{
  email.style.border="groove green"
  error3.textContent ="you have entered a valid email address"
@@ -243,10 +257,12 @@ if(foBirth.value==""){
 else{
  foBirth.style.border="groove green"
 }
+
+ const regex = /^[a-zA-Z0-9]{13}$/;
 if(ninNumber.value==""){
  ninNumber.style.border="solid red"
  return false
-}else if(ninNumber.value.length < 13 ){
+}else if(!ninNumber.value.match(regex) ){
   ninNumber.style.border="solid red"
   error7.textContent ="should be 13 alphameric characters"
   error7.style.color="red"
@@ -421,10 +437,12 @@ else{
 othernumber.style.border="groove green"
 }
 
+
+const regex = /^[a-zA-Z0-9]{13}$/;
 if(ninNumber.value==""){
  ninNumber.style.border="solid red"
  return false
-}else if(ninNumber.value.length < 13 ){
+}else if(!ninNumber.value.match(regex) ){
   ninNumber.style.border="solid red"
   error4.textContent ="should be 13 alphameric characters"
   error4.style.color="red"
@@ -459,7 +477,7 @@ const validate5 = ()=>{
   const payment = document.getElementById("payment");
   const directions = document.getElementById("directions");
   const delivery = document.getElementById("delivery");
-  const quantity = document.getElementById("quantity");
+  const qty = document.getElementById("qty");
   const produce = document.getElementById("produce");
   const availability = document.getElementById("availability");
 
@@ -496,13 +514,17 @@ const validate5 = ()=>{
    date.style.border="groove green"
    }
 
-   if(price.value==""){
+
+     const priceRegex = /^\d+(\.\d{1,2})?$/;
+   if(!price.value.match(priceRegex)){
     price.style.border="solid red"
     return false
    }
    else{
    price.style.border="groove green"
    }
+
+
 
    if(category.value==""){
     category.style.border="solid red"
@@ -536,12 +558,12 @@ const validate5 = ()=>{
    delivery.style.border="groove green"
    }
 
-   if(quantity.value==""){
-    quantity.style.border="solid red"
+   if(qty.value==""){
+    qty.style.border="solid red"
     return false
    }
    else{
-   quantity.style.border="groove green"
+   qty.style.border="groove green"
    }
 
    if(produce.value==""){

@@ -11,6 +11,8 @@ head
     .container
       .row
         .col
+          a.u-fo(href='./homePage')
+            h1 UFARM
         .col(style='text-align: center;')
           h1 Cart
           p
@@ -27,7 +29,7 @@ head
                   tr
                     td #{cart.name}
                     td #{cart.quantity}
-                    td #{cart.price}
+                    td #{cart.price*cart.quantity}
                     td
                       a.btn.btn-outline-success(href="/checkout/"+cart._id) Checkout
                  

@@ -19,7 +19,7 @@ const me = mongoose.Schema.Types.ObjectId
       },
       quantity:{
         type:Number,
-        default:null 
+        default:1 
       },
       status: {
         type: String,
