@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const Port = 3000;
 const path = require("path")
 const router=express.Router()
 const mongoose = require("mongoose")
@@ -74,7 +75,10 @@ app.get("*", (req, res)=>{
 
 
 
+ app.listen(process.env.port || Port, () => {
+  console.log(`listen to port ${Port}`);
+});
 
-app.listen(3000,()=>{
-    console.log("listening on port 3000")
-})
+// app.listen(3000,()=>{
+//     console.log("listening on port 3000")
+// })
