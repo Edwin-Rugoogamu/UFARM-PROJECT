@@ -47,7 +47,7 @@ mongoose.connect(database.connect,{
     useUnifiedTopology:true
 })
 
-const db = mongoose.connection
+const db = mongoose.connection;
 // checking if db has connected
 db.once("open", ()=>{
     console.log("connected to db")
