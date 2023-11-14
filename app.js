@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const Port = 3000;
+const port = process.env.PORT || 3000;
 const path = require("path")
 const router=express.Router()
 const mongoose = require("mongoose")
@@ -8,7 +8,7 @@ const bodyParser = require("body-parser")
 const passport = require("passport")
 const session = require("express-session")
 require("dotenv").config()
-
+const database = require("./config/database");
 app.set("view engine","pug")
 app.set("views",path.join(__dirname,"views"))
 
@@ -42,7 +42,7 @@ passport.deserializeUser(User.deserializeUser());
 
 
 
-mongoose.connect(config.database,{
+mongoose.connect(database.connect,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
@@ -75,8 +75,8 @@ app.get("*", (req, res)=>{
 
 
 
- app.listen(process.env.port || Port, () => {
-  console.log(`listen to port ${Port}`);
+ app.listen(port, () => {
+  console.log(`listen to port ${port}`);
 });
 
 // app.listen(3000,()=>{

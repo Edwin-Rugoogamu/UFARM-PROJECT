@@ -1,5 +1,8 @@
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+
 module.exports = {
-    // creating path to our database
-    database:"mongodb://0.0.0.0:27017/ufarm",
-    secret:"mySecret"
-}
+  connect:process.env.DATABASE, 
+};
