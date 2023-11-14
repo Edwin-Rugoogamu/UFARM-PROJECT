@@ -1,10 +1,10 @@
 const express=require("express");
 const router=express.Router()
 
-router.get("/fontpage",(req,res)=>{
+router.get("/",(req,res)=>{
     res.render("fontpage")
 })
-router.post("/fontpage",(req,res)=>{
+router.post("/",(req,res)=>{
     res.render("fontpage")
 })
 
